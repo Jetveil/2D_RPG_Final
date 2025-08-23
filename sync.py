@@ -2,8 +2,8 @@
 import time
 import zipfile
 
-watched_folder = "../Assets/"
-output_zip = "../LatestCode.zip"
+watched_folder = "./Assets/"
+output_zip = "./LatestCode.zip"
 
 def zip_folder(folder_path, zip_path):
     with zipfile.ZipFile(zip_path, 'w') as zipf:
