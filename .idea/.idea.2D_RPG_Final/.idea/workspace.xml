@@ -26,17 +26,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_IdleState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_MoveState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
+    <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="Flip functionality is done">
+      <change afterPath="$PROJECT_DIR$/Assets/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_move.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_move.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_IdleState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_MoveState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EntityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EntityState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_Graphics.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_Graphics.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_MoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_MoveState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/sync.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LatestCode.zip" beforeDir="false" afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +79,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/136540882b2e44dc88ac4ba62db1ab6a2fc00/b7/1aad43ad/Rigidbody2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player_MoveState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@7fe8299111a7/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -187,7 +199,7 @@
       <workItem from="1755928184982" duration="3861000" />
       <workItem from="1755940162452" duration="853000" />
       <workItem from="1755941035034" duration="1512000" />
-      <workItem from="1755942578153" duration="2343000" />
+      <workItem from="1755942578153" duration="10566000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -205,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755116502755</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FSM blueprint completed">
+      <option name="closed" value="true" />
+      <created>1755944965092</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1755944965092</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +254,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Other project files added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Other project files added" />
+    <MESSAGE value="FSM blueprint completed" />
+    <MESSAGE value="Flip functionality is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flip functionality is done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
