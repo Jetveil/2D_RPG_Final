@@ -16,6 +16,7 @@ public class StateMachine
         currentState = startState;
         currentState.Enter();
     }
+
     /// <summary>
     /// Вызывает Exit у текущего и Enter у нового состояния, обновляя текущее.
     /// </summary>
@@ -25,6 +26,7 @@ public class StateMachine
         currentState = newState;
         currentState.Enter();
     }
+
     /// <summary>
     /// Делегирует обновление текущему состоянию.
     /// </summary>

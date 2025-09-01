@@ -27,24 +27,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Player_AiredState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_FallState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_GroundedState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_JumpState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_dash.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_wallSlide.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Slippy_Mat.physicsMaterial2D" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_DashState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_DashState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_WallSlideState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_WallSlideState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EntityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EntityState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_FallState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_FallState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player_Graphics.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_Graphics.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player_IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_JumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_JumpState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player_MoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_MoveState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LatestCode.zip" beforeDir="false" afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +86,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Player_AiredState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player_GroundedState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player_MoveState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player_WallJumpState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@7fe8299111a7/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -94,25 +102,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\Erm\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="8d11cfb2-29bf-4713-b8b7-a3d89670e224" reportId="2D_RPG_Final/qodana/2025-08-22" />
@@ -199,7 +207,10 @@
       <workItem from="1755941035034" duration="1512000" />
       <workItem from="1755942578153" duration="11614000" />
       <workItem from="1756012557581" duration="8594000" />
-      <workItem from="1756113400263" duration="2884000" />
+      <workItem from="1756113400263" duration="12659000" />
+      <workItem from="1756221798310" duration="1003000" />
+      <workItem from="1756350840939" duration="9960000" />
+      <workItem from="1756531154513" duration="11804000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -233,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755963828409</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Jump state completed">
+      <option name="closed" value="true" />
+      <created>1756116525021</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756116525021</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +283,8 @@
     <MESSAGE value="Other project files added" />
     <MESSAGE value="FSM blueprint completed" />
     <MESSAGE value="Flip functionality is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flip functionality is done" />
+    <MESSAGE value="Jump state completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jump state completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

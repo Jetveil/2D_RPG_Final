@@ -9,7 +9,10 @@ public class Player_FallState : Player_AiredState
     public override void Update()
     {
         base.Update();
-        if(player.groundDetected)
+        if (player.groundDetected)
             stateMachine.ChangeState(player.idleState);
+        
+        if (player.wallDetected) 
+            stateMachine.ChangeState(player.wallSlideState);
     }
 }

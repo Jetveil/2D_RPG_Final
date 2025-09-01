@@ -16,7 +16,7 @@ public class Player_MoveState : Player_GroundedState
         {
             stateMachine.ChangeState(player.idleState);
         }
-        
+
         player.SetVelocity(player.moveSpeed * player.moveInput.x, rb.linearVelocity.y);
     }
 }
