@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
 
+    [Header("Attack Settings")]
+    public Vector2 attackVelocity;
+    public float attackVelocityDuration = .1f;
+
     [Header("Movement Settings")]
     public float moveSpeed;
     public float jumpForce = 5f;
@@ -47,6 +51,7 @@ public class Player : MonoBehaviour
     public Player_WallJumpState wallJumpState { get; private set; }
     public Player_WallSlideState wallSlideState { get; private set; }
     public Player_DashState dashState { get; private set; }
+    public Player_BasicAttackState basicAttackState { get; private set; }
 
     /// <summary>
     /// Инициализация: создаём состояния и запускаем FSM.
@@ -66,6 +71,7 @@ public class Player : MonoBehaviour
         wallSlideState = new Player_WallSlideState(this, stateMachine, "wallSlide");
         wallJumpState = new Player_WallJumpState(this, stateMachine, "jumpFall");
         dashState = new Player_DashState(this, stateMachine, "dash");
+        basicAttackState = new Player_BasicAttackState(this, stateMachine, "basicAttack");
     }
 
     private void OnEnable()
@@ -90,6 +96,11 @@ public class Player : MonoBehaviour
     {
         HandleCollisionDetection();
         stateMachine.UpdateActiveState();
+    }
+
+    public void CallAnimationTrigger()
+    {
+        stateMachine.currentState.CallAnimationTrigger();
     }
 
     public void SetVelocity(float xVelocity, float yVelocity)

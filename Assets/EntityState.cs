@@ -15,6 +15,8 @@ public abstract class EntityState
 
     protected float stateTimer;
 
+    protected bool triggerCalled;
+
     public EntityState(Player player, StateMachine stateMachine, string animBoolName)
     {
         this.player = player;
@@ -32,6 +34,7 @@ public abstract class EntityState
     public virtual void Enter()
     {
         anim.SetBool(animBoolName, true);
+        triggerCalled = false;
     }
 
 
@@ -41,7 +44,7 @@ public abstract class EntityState
 
         stateTimer -= Time.deltaTime;
 
-        if (input.Player.Dash.WasPressedThisFrame() && CanDash())
+        if (input.Player.Dash.WasPerformedThisFrame() && CanDash())
             stateMachine.ChangeState(player.dashState);
     }
 
@@ -51,6 +54,11 @@ public abstract class EntityState
     public virtual void Exit()
     {
         anim.SetBool(animBoolName, false);
+    }
+
+    public void CallAnimationTrigger()
+    {
+        triggerCalled = true;
     }
 
     private bool CanDash()

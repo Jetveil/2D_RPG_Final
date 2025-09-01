@@ -27,30 +27,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_dash.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_wallSlide.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Slippy_Mat.physicsMaterial2D" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_DashState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_DashState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_WallSlideState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_WallSlideState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_AnimationTriggers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_BasicAttackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EntityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EntityState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_FallState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_FallState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_Graphics.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_Graphics.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_JumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_JumpState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_MoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_MoveState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LatestCode.zip" beforeDir="false" afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +195,7 @@
       <workItem from="1756113400263" duration="12659000" />
       <workItem from="1756221798310" duration="1003000" />
       <workItem from="1756350840939" duration="9960000" />
-      <workItem from="1756531154513" duration="11804000" />
+      <workItem from="1756531154513" duration="16199000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -252,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756116525021</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added wall slide and dash states to player FSM">
+      <option name="closed" value="true" />
+      <created>1756697830260</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756697830260</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +277,9 @@
     <MESSAGE value="FSM blueprint completed" />
     <MESSAGE value="Flip functionality is done" />
     <MESSAGE value="Jump state completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jump state completed" />
+    <MESSAGE value="Dash State Completed" />
+    <MESSAGE value="Added wall slide and dash states to player FSM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added wall slide and dash states to player FSM" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
