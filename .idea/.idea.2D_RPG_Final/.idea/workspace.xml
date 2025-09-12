@@ -19,26 +19,1107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Player_JumpAttack_State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_1.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_1.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_2.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_2.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_3.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_3.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_End.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_End.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_Start.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_Start.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_dash.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_wallSlide.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Background.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Background/layer_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Background/layer_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Background/layer_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Background/layer_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Background/layer_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Background/layer_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/idle/idle_knight_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_10.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_11.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_12.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_2.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_2.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/knight/walk/walk_knight_9.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_nofire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_small/candelabrum_small_nofire.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_nofire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_nofire.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_1/candle_1_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_2/candle_2_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_3/candle_3_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_1/candle_blue_1_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_2/candle_blue_2_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/candle_blue_3/candle_blue_3_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_damaged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/chest/chest_damaged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_floor/lever_floor_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/lever_wall/lever_wall_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big/torch_big_background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small/torch_small_background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/axe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/axe.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bag_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bag_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bag_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bag_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/barrel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/barrel.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/barrel_damaged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/barrel_damaged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/books.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/books.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bookshelf_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bookshelf_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bookshelf_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/bookshelf_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/chair_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/chair_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/chair_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/chair_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_1_damaged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_1_damaged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_2_damaged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_2_damaged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_3_damaged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/crate_3_damaged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_blue_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_blue_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_blue_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_blue_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_red_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_red_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_red_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/curtain_red_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/door.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/flag_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/flag_blue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/flag_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/flag_red.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/langdebeve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/langdebeve.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/pole_axe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/pole_axe.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potion_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potions_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potions_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potions_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/potions_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/scroll_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/scroll_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/scroll_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/scroll_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/sword_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/sword_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/sword_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/sword_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/table_noshadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/table_noshadow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/table_shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/table_shadow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/weapon_rack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/weapon_rack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/wood_plank_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/wood_plank_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/wood_plank_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/wood_plank_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/wood_plank_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Decorations/wood_plank_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/bar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/bar_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/bar_background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/health_bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/health_bar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/weapon_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/HUD/weapon_icon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Player_Graphics.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Player_Graphics.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/arch_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/blank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/blank.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_10.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_11.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_12.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_13.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_14.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_15.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_16.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_9.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_left_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_left_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_right_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/brick_side_right_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_corner_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_corner_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_corner_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_corner_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_transparent_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_transparent_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_transparent_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/ceiling_transparent_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/column_8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/damaged_brick_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_corner_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_corner_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_corner_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_corner_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_transition_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_transition_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_transition_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_carpet_transition_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_corner_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_corner_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_corner_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_corner_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_carpet_transition_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_carpet_transition_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_carpet_transition_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_carpet_transition_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_transition_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_transition_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_transition_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_tile_wood_transition_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_corner_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_corner_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_corner_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_corner_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_transition_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_transition_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_transition_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_carpet_transition_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_corner_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_corner_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_corner_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/floor_wood_corner_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_10.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_11.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_12.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/lion_column_9.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/merlons_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_shadow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_wall_connection_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_wall_connection_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_wall_connection_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/platform_wall_connection_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/spikes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/spikes.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_tile_carpet_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/stairs_wood_carpet_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/tile_side_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/tile_side_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/tile_side_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/tile_side_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_10.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_11.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_12.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_13.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_14.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_15.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_16.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_17.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_18.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/wall_9.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_big_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_tall_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_tall_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_tall_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_tall_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_tall_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_glass_tall_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_small_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_small_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_small_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_small_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_tall_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_tall_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_tall_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_tall_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_tall_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Graphics/Tiles/window_tall_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Slippy_Mat.physicsMaterial2D.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EntityState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EntityState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_AiredState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_AiredState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_AnimationTriggers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_AnimationTriggers.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_BasicAttackState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_BasicAttackState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_DashState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_DashState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_FallState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_FallState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_GroundedState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_GroundedState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_IdleState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_IdleState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_JumpAttack_State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_JumpAttack_State.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_JumpState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_JumpState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_MoveState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_MoveState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_WallJumpState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_WallJumpState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_WallSlideState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player_WallSlideState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Environment Palette.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Environment Palette.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_5_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_5_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_6_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_6_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_7_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/arch_7_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/blank_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/blank_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_10_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_10_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_11_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_11_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_12_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_12_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_13_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_13_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_14_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_14_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_15_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_15_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_16_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_16_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_5_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_5_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_6_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_6_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_7_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_7_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_8_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_8_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_9_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/brick_9_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_corner_left_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_corner_left_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_corner_right_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_corner_right_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_transparent_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_transparent_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_transparent_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/ceiling_transparent_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_5_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_5_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_6_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_6_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_7_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_7_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_8_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/column_8_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/damaged_brick_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_corner_left_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_corner_left_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_corner_right_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_corner_right_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_transition_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_transition_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_transition_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_carpet_transition_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_corner_left_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_corner_left_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_corner_right_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_corner_right_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_carpet_transition_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_carpet_transition_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_carpet_transition_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_carpet_transition_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_transition_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_transition_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_transition_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_tile_wood_transition_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_corner_left_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_corner_left_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_corner_right_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_corner_right_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_transition_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_transition_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_transition_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_carpet_transition_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_corner_left_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_corner_left_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_corner_right_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/floor_wood_corner_right_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_10_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_10_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_11_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_11_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_12_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_12_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_5_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_5_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_6_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_6_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_7_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_7_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_8_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_8_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_9_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/lion_column_9_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_5_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/merlons_5_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/spikes_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/spikes_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/tile_side_left_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/tile_side_left_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/tile_side_right_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/tile_side_right_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_10_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_10_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_11_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_11_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_12_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_12_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_13_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_13_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_14_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_14_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_15_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_15_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_16_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_16_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_17_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_17_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_18_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_18_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_5_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_5_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_6_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_6_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_7_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_7_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_8_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_8_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_9_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/wall_9_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_4_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_4_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_5_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_5_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_6_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_big_6_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_tall_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_tall_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_tall_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_tall_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_tall_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_glass_tall_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_small_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_small_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_small_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_small_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_1_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_1_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_2_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_2_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_2_1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_2_1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_3_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tile Palette/Tiles/window_tall_3_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_AiredState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_AiredState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_BasicAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_BasicAttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_DashState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_DashState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_FallState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_FallState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_JumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_JumpState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_MoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_MoveState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/player_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EntityState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EntityState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_AiredState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_AiredState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_AnimationTriggers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_BasicAttackState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_DashState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_DashState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_FallState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_FallState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_Graphics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_Graphics.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_GroundedState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_IdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_IdleState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_JumpAttack_State.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_JumpState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_JumpState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_MoveState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_MoveState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_WallSlideState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_WallSlideState.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StateMachine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StateMachine.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LatestCode.zip" beforeDir="false" afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/sync.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +1151,11 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/136540882b2e44dc88ac4ba62db1ab6a2fc00/b7/1aad43ad/Rigidbody2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player_AiredState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player_AnimationTriggers.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player_GroundedState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player_MoveState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player_WallJumpState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@7fe8299111a7/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Graphics/Player_Graphics.png.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player_AnimationTriggers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -90,31 +1170,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
-    "settings.editor.splitter.proportion": "0.30544272",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.30544272&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\Erm\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="8d11cfb2-29bf-4713-b8b7-a3d89670e224" reportId="2D_RPG_Final/qodana/2025-08-22" />
-    </option>
-  </component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.14f1\Editor\Unity.exe" />
@@ -209,7 +1284,8 @@
       <workItem from="1757481465888" duration="5956000" />
       <workItem from="1757662001582" duration="2636000" />
       <workItem from="1757665720089" duration="2208000" />
-      <workItem from="1757667961555" duration="7939000" />
+      <workItem from="1757667961555" duration="9537000" />
+      <workItem from="1757691341382" duration="3112000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -267,7 +1343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756703225038</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FSM Section done">
+      <option name="closed" value="true" />
+      <created>1757685466027</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757685466027</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +1386,8 @@
     <MESSAGE value="Dash State Completed" />
     <MESSAGE value="Added wall slide and dash states to player FSM" />
     <MESSAGE value="**Added basic attack state to player FSM: Attack velocity in progress**" />
-    <option name="LAST_COMMIT_MESSAGE" value="**Added basic attack state to player FSM: Attack velocity in progress**" />
+    <MESSAGE value="FSM Section done" />
+    <option name="LAST_COMMIT_MESSAGE" value="FSM Section done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
