@@ -17,6 +17,11 @@ public class Player_WallJumpState : EntityState
     {
         base.Update();
 
+        if (input.Player.Attack.WasPressedThisFrame())
+        {
+            stateMachine.ChangeState(player.jumpAttackState);
+            return;
+        }
 
         if (rb.linearVelocity.y < 0)
             stateMachine.ChangeState(player.fallState);

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -17,8 +18,11 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
 
     [Header("Attack Settings")]
-    public Vector2 attackVelocity;
+    public Vector2[] attackVelocity;
+    public Vector2 jumpAttackVelocity;
     public float attackVelocityDuration = .1f;
+    public float comboResetTime;
+    private Coroutine queuedAttackCo;
 
     [Header("Movement Settings")]
     public float moveSpeed;
@@ -40,6 +44,10 @@ public class Player : MonoBehaviour
     private float wallCheckDistance;
     [SerializeField]
     private LayerMask whatIsGround;
+    [SerializeField]
+    private Transform primaryWallCheck;
+    [SerializeField]
+    private Transform secondaryWallCheck;
     public bool groundDetected { get; private set; }
     public bool wallDetected { get; private set; }
 
@@ -52,6 +60,7 @@ public class Player : MonoBehaviour
     public Player_WallSlideState wallSlideState { get; private set; }
     public Player_DashState dashState { get; private set; }
     public Player_BasicAttackState basicAttackState { get; private set; }
+    public Player_JumpAttack_State jumpAttackState { get; private set; }
 
     /// <summary>
     /// Инициализация: создаём состояния и запускаем FSM.
@@ -72,6 +81,7 @@ public class Player : MonoBehaviour
         wallJumpState = new Player_WallJumpState(this, stateMachine, "jumpFall");
         dashState = new Player_DashState(this, stateMachine, "dash");
         basicAttackState = new Player_BasicAttackState(this, stateMachine, "basicAttack");
+        jumpAttackState = new Player_JumpAttack_State(this, stateMachine, "jumpAttack");
     }
 
     private void OnEnable()
@@ -96,6 +106,20 @@ public class Player : MonoBehaviour
     {
         HandleCollisionDetection();
         stateMachine.UpdateActiveState();
+    }
+
+    public void EnterAttackStateWithDelay()
+    {
+        if (queuedAttackCo != null)
+            StopCoroutine(queuedAttackCo);
+
+        queuedAttackCo = StartCoroutine(EnterAttackStateWIthDelayCo());
+    }
+
+    private IEnumerator EnterAttackStateWIthDelayCo()
+    {
+        yield return new WaitForEndOfFrame();
+        stateMachine.ChangeState(basicAttackState);
     }
 
     public void CallAnimationTrigger()
@@ -127,12 +151,14 @@ public class Player : MonoBehaviour
     private void HandleCollisionDetection()
     {
         groundDetected = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, whatIsGround);
-        wallDetected = Physics2D.Raycast(transform.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
+        wallDetected = Physics2D.Raycast(primaryWallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround)
+            && Physics2D.Raycast(secondaryWallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + new Vector3(0, -groundCheckDistance));
-        Gizmos.DrawLine(transform.position, transform.position + new Vector3(wallCheckDistance * facingDir, 0));
+        Gizmos.DrawLine(primaryWallCheck.position, primaryWallCheck.position + new Vector3(wallCheckDistance * facingDir, 0));
+        Gizmos.DrawLine(secondaryWallCheck.position, secondaryWallCheck.position + new Vector3(wallCheckDistance * facingDir, 0));
     }
 }

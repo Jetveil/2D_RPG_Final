@@ -3,19 +3,11 @@
   <component name="AIAssistantCustomInstructionsStorage">
     <option name="instructions">
       <map>
-        <entry key="AIAssistant.General.ProjectPrompt">
-          <value>
-            <AIAssistantStoredInstruction>
-              <option name="actionId" value="AIAssistant.General.ProjectPrompt" />
-              <option name="content" value="Use russian language" />
-            </AIAssistantStoredInstruction>
-          </value>
-        </entry>
         <entry key="AIAssistant.WriteDocumentation.CSharp">
           <value>
             <AIAssistantStoredInstruction>
               <option name="actionId" value="AIAssistant.WriteDocumentation.CSharp" />
-              <option name="content" value="Do not return example code, do not use @author or @version or @since tags.&#10;DO NOT generate example usage.&#10;DO NOT generate usage example.&#10;DO NOT use html tags such as &lt;p&gt;, &lt;lu&gt;, &lt;li&gt;.&#10;DO NOT generate documentation for type member properties.&#10;Write C# doc.&#10;Write C# doc. in russian languagle&#10;Use russian language" />
+              <option name="content" value="Do not return example code, do not use @author or @version or @since tags.&#10;DO NOT generate example usage.&#10;DO NOT generate usage example.&#10;DO NOT use html tags such as &lt;p&gt;, &lt;lu&gt;, &lt;li&gt;.&#10;DO NOT generate documentation for type member properties.&#10;Write C# doc.&#10;Write C# doc. in russian languagle&#10;" />
             </AIAssistantStoredInstruction>
           </value>
         </entry>
@@ -27,16 +19,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_AnimationTriggers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player_BasicAttackState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player_JumpAttack_State.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EntityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EntityState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack.anim" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_AiredState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_AiredState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_BasicAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_BasicAttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_DashState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_DashState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_FallState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_FallState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_GroundedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_JumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_JumpState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_MoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_MoveState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player_WallJumpState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LatestCode.zip" beforeDir="false" afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/sync.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/136540882b2e44dc88ac4ba62db1ab6a2fc00/b7/1aad43ad/Rigidbody2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player_AiredState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player_AnimationTriggers.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player_GroundedState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player_MoveState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player_WallJumpState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,25 +90,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "settings.editor.splitter.proportion": "0.30544272",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\Erm\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="8d11cfb2-29bf-4713-b8b7-a3d89670e224" reportId="2D_RPG_Final/qodana/2025-08-22" />
@@ -195,7 +199,17 @@
       <workItem from="1756113400263" duration="12659000" />
       <workItem from="1756221798310" duration="1003000" />
       <workItem from="1756350840939" duration="9960000" />
-      <workItem from="1756531154513" duration="16199000" />
+      <workItem from="1756531154513" duration="20658000" />
+      <workItem from="1756905435245" duration="660000" />
+      <workItem from="1757096492003" duration="166000" />
+      <workItem from="1757096723391" duration="1267000" />
+      <workItem from="1757101128047" duration="3784000" />
+      <workItem from="1757186475077" duration="3185000" />
+      <workItem from="1757328779444" duration="28902000" />
+      <workItem from="1757481465888" duration="5956000" />
+      <workItem from="1757662001582" duration="2636000" />
+      <workItem from="1757665720089" duration="2208000" />
+      <workItem from="1757667961555" duration="7939000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -245,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756697830260</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="**Added basic attack state to player FSM: Attack velocity in progress**">
+      <option name="closed" value="true" />
+      <created>1756703225038</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756703225038</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +301,8 @@
     <MESSAGE value="Jump state completed" />
     <MESSAGE value="Dash State Completed" />
     <MESSAGE value="Added wall slide and dash states to player FSM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added wall slide and dash states to player FSM" />
+    <MESSAGE value="**Added basic attack state to player FSM: Attack velocity in progress**" />
+    <option name="LAST_COMMIT_MESSAGE" value="**Added basic attack state to player FSM: Attack velocity in progress**" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
