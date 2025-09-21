@@ -10,17 +10,18 @@ public class Player_WallSlideState : EntityState
     {
         base.Update();
         HandleWallSlide();
-        
-        if(input.Player.Jump.WasPressedThisFrame())
+
+        if (input.Player.Jump.WasPressedThisFrame())
             stateMachine.ChangeState(player.wallJumpState);
-        
-        if(player.wallDetected == false)
+
+        if (player.wallDetected == false)
             stateMachine.ChangeState(player.fallState);
 
         if (player.groundDetected)
         {
             stateMachine.ChangeState(player.idleState);
-            player.Flip();
+            if (player.facingDir != player.moveInput.x)
+                player.Flip();
         }
     }
 
@@ -28,7 +29,7 @@ public class Player_WallSlideState : EntityState
     {
         if (player.moveInput.y < 0)
             player.SetVelocity(player.moveInput.x, rb.linearVelocity.y);
-        else 
+        else
             player.SetVelocity(player.moveInput.x, rb.linearVelocity.y * player.wallSlideSlowMultiplier);
     }
 }

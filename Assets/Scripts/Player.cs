@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 /// Игрок: хранит ссылки на состояния и компоненты,
 /// и делегирует работу активному состоянию FSM.
 /// </summary>
-public class Player : MonoBehaviour
+public class Player : Entity
 {
     public PlayerInputSet input { get; private set; }
     public Vector2 moveInput { get; private set; }
