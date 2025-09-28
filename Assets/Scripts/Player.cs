@@ -12,10 +12,16 @@ using UnityEngine.InputSystem;
 public class Player : Entity
 {
     public PlayerInputSet input { get; private set; }
-    public Vector2 moveInput { get; private set; }
 
-    public Animator anim { get; private set; }
-    public Rigidbody2D rb { get; private set; }
+    public Player_IdleState idleState { get; private set; }
+    public Player_MoveState moveState { get; private set; }
+    public Player_JumpState jumpState { get; private set; }
+    public Player_FallState fallState { get; private set; }
+    public Player_WallJumpState wallJumpState { get; private set; }
+    public Player_WallSlideState wallSlideState { get; private set; }
+    public Player_DashState dashState { get; private set; }
+    public Player_BasicAttackState basicAttackState { get; private set; }
+    public Player_JumpAttack_State jumpAttackState { get; private set; }
 
     [Header("Attack Settings")]
     public Vector2[] attackVelocity;
@@ -30,48 +36,18 @@ public class Player : Entity
     [Range(0, 1)]
     public float inAirMoveMultiplier = 0.7f;
     public float wallSlideSlowMultiplier = 0.7f;
-    private bool isFacingRight = true;
-    public int facingDir { get; private set; } = 1;
     public Vector2 wallJumpForce;
     [Space]
     public float dashDuration = .25f;
     public float dashSpeed = 20;
+    public Vector2 moveInput { get; private set; }
 
-    [Header("Collision Detection")]
-    [SerializeField]
-    private float groundCheckDistance;
-    [SerializeField]
-    private float wallCheckDistance;
-    [SerializeField]
-    private LayerMask whatIsGround;
-    [SerializeField]
-    private Transform primaryWallCheck;
-    [SerializeField]
-    private Transform secondaryWallCheck;
-    public bool groundDetected { get; private set; }
-    public bool wallDetected { get; private set; }
 
-    public StateMachine stateMachine { get; private set; }
-    public Player_IdleState idleState { get; private set; }
-    public Player_MoveState moveState { get; private set; }
-    public Player_JumpState jumpState { get; private set; }
-    public Player_FallState fallState { get; private set; }
-    public Player_WallJumpState wallJumpState { get; private set; }
-    public Player_WallSlideState wallSlideState { get; private set; }
-    public Player_DashState dashState { get; private set; }
-    public Player_BasicAttackState basicAttackState { get; private set; }
-    public Player_JumpAttack_State jumpAttackState { get; private set; }
-
-    /// <summary>
-    /// Инициализация: создаём состояния и запускаем FSM.
-    /// </summary>
-    private void Awake()
+    protected override void Awake()
     {
-        anim = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        base.Awake();
 
         input = new PlayerInputSet();
-        stateMachine = new StateMachine();
 
         idleState = new Player_IdleState(this, stateMachine, "idle");
         moveState = new Player_MoveState(this, stateMachine, "move");
@@ -84,28 +60,9 @@ public class Player : Entity
         jumpAttackState = new Player_JumpAttack_State(this, stateMachine, "jumpAttack");
     }
 
-    private void OnEnable()
-    {
-        input.Enable();
-        input.Player.Movement.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        input.Player.Movement.canceled += ctx => moveInput = Vector2.zero;
-    }
-
-    private void OnDisable()
-    {
-        input.Disable();
-    }
-
-    private void Start()
+    override protected void Start()
     {
         stateMachine.Initialize(idleState);
-    }
-
-
-    private void Update()
-    {
-        HandleCollisionDetection();
-        stateMachine.UpdateActiveState();
     }
 
     public void EnterAttackStateWithDelay()
@@ -122,43 +79,15 @@ public class Player : Entity
         stateMachine.ChangeState(basicAttackState);
     }
 
-    public void CallAnimationTrigger()
+    private void OnEnable()
     {
-        stateMachine.currentState.CallAnimationTrigger();
+        input.Enable();
+        input.Player.Movement.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
+        input.Player.Movement.canceled += ctx => moveInput = Vector2.zero;
     }
 
-    public void SetVelocity(float xVelocity, float yVelocity)
+    private void OnDisable()
     {
-        rb.linearVelocity = new Vector2(xVelocity, yVelocity);
-        HandleFlip(xVelocity);
-    }
-
-    private void HandleFlip(float xVelocity)
-    {
-        if (xVelocity > 0 && !isFacingRight)
-            Flip();
-        else if (xVelocity < 0 && isFacingRight)
-            Flip();
-    }
-
-    public void Flip()
-    {
-        rb.transform.Rotate(0, 180, 0);
-        isFacingRight = !isFacingRight;
-        facingDir = facingDir * -1;
-    }
-
-    private void HandleCollisionDetection()
-    {
-        groundDetected = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, whatIsGround);
-        wallDetected = Physics2D.Raycast(primaryWallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround)
-            && Physics2D.Raycast(secondaryWallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(transform.position, transform.position + new Vector3(0, -groundCheckDistance));
-        Gizmos.DrawLine(primaryWallCheck.position, primaryWallCheck.position + new Vector3(wallCheckDistance * facingDir, 0));
-        Gizmos.DrawLine(secondaryWallCheck.position, secondaryWallCheck.position + new Vector3(wallCheckDistance * facingDir, 0));
+        input.Disable();
     }
 }

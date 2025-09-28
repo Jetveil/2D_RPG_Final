@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player_BasicAttackState : EntityState
+public class Player_BasicAttackState : PlayerState
 {
     public Player_BasicAttackState(Player player, StateMachine stateMachine, string animBoolName) : base(player, stateMachine, animBoolName)
     {
