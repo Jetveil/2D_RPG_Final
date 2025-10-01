@@ -7,7 +7,7 @@
           <value>
             <AIAssistantStoredInstruction>
               <option name="actionId" value="AIAssistant.General.ProjectPrompt" />
-              <option name="content" value="Возвращай ответы в UTF-8" />
+              <option name="content" value="Возвращай ответы в UTF-8&#10;Тебе разрешен доступ ко всем файлам в D:\dev\Unity_Pojects\2D_RPG_Final\Assets\Scripts, анализируй их если необходимо" />
             </AIAssistantStoredInstruction>
           </value>
         </entry>
@@ -27,71 +27,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.aiassistant/rules/Language.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/AnimatorControllers/Player_AC.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_BasicAttack_1.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_BasicAttack_2.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_BasicAttack_3.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_JumpAttack_End.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_JumpAttack_Start.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_dash.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_fall.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_jump.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_move.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimations/player_wallSlide.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_IdleState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_MoveState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_Skeleton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EntityState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/SkeletonAnimations/skeleton_attack.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/SkeletonAnimations/skeleton_attack.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_AttackState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_AttackState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_BattleState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_BattleState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_GroundedState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_GroundedState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity_AnimationTriggers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_AC.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_1.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_2.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_2.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_3.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_BasicAttack_3.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_End.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_End.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_Start.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_JumpAttack_Start.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_dash.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_dash.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_fall.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_fall.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_jump.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_jump.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_move.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_move.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_wallSlide.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player_wallSlide.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkeletonAnimations/Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SkeletonAnimations/Animator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkeletonAnimations/skeleton_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SkeletonAnimations/skeleton_idle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Attack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Attack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Dead.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Dead.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Hit.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Hit.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton React.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton React.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Walk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Characters/Skeleton/Skeleton Walk.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy_IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy_MoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_MoveState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy_Skeleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy_Skeleton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_AiredState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_AiredState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_BasicAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_BasicAttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_DashState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_DashState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_GroundedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_GroundedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_JumpAttack_State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_JumpAttack_State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_WallJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_WallJumpState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_WallSlideState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_WallSlideState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_AnimationTriggers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStates/Player_AnimationTriggers.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity_AnimationTriggers.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EntityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EntityState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LatestCode.zip" beforeDir="false" afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
@@ -125,12 +87,17 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/87d3f210-8756-4803-a6c1-b158736d89b0_LatestCode.zip.9b0/Assets/Scripts/Enemy_Skeleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/a13730ad-1ecd-4dad-b505-683d99c16731_LatestCode.zip.731/Assets/Scripts/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/ad9be9c5-e2ea-42db-a705-388ceb50eb7c_LatestCode.zip.b7c/Assets/Scripts/Enemy_AttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/136540882b2e44dc88ac4ba62db1ab6a2fc00/b7/1aad43ad/Rigidbody2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Animations.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Graphics.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Graphics/Player_Graphics.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy_BattleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy_GroundedState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy_IdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy_MoveState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -156,26 +123,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
-    "settings.editor.splitter.proportion": "0.17782657",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.17782657&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.14f1\Editor\Unity.exe" />
@@ -343,7 +310,12 @@
       <workItem from="1758899237813" duration="463000" />
       <workItem from="1758900293930" duration="372000" />
       <workItem from="1758903296332" duration="45000" />
-      <workItem from="1758903356139" duration="31291000" />
+      <workItem from="1758903356139" duration="38644000" />
+      <workItem from="1759083541005" duration="2793000" />
+      <workItem from="1759138351111" duration="25639000" />
+      <workItem from="1759238510222" duration="8881000" />
+      <workItem from="1759260889326" duration="4542000" />
+      <workItem from="1759295626359" duration="9049000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -425,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758469303674</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add enemy entity with FSM and animation controller. Walk &amp; Idle states done">
+      <option name="closed" value="true" />
+      <created>1759060252194</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759060252194</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +443,9 @@
     <MESSAGE value="FSM Section done" />
     <MESSAGE value="Main Backup 1.0" />
     <MESSAGE value="Enemy FSM started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enemy FSM started" />
+    <MESSAGE value="Enemy Walk &amp; Idle states done" />
+    <MESSAGE value="Add enemy entity with FSM and animation controller. Walk &amp; Idle states done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add enemy entity with FSM and animation controller. Walk &amp; Idle states done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
