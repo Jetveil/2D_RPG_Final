@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -6,6 +7,14 @@ public class Enemy : Entity
     public Enemy_MoveState moveState;
     public Enemy_AttackState attackState;
     public Enemy_BattleState battleState;
+    public Enemy_DeadState deadState;
+    public Enemy_StunnedState stunnedState;
+
+    [Header("Stunned State details")]
+    public float stunnedDuration = 1;
+    public Vector2 stunnedVelocity = new Vector2(7, 7);
+    [SerializeField]
+    protected bool canBeStunned;
 
     [Header("Battle Details")]
     public float battleMoveSpeed = 3;
@@ -28,7 +37,38 @@ public class Enemy : Entity
     private Transform playerCheck;
     [SerializeField]
     private float playerCheckDistance = 10;
+    public Transform player { get; private set; }
 
+    public void EnableCounterWindow(bool enable) => canBeStunned = enable;
+
+    public override void EntityDeath()
+    {
+        base.EntityDeath();
+
+        stateMachine.ChangeState(deadState);
+    }
+
+    private void HandlePlayerDeath()
+    {
+        stateMachine.ChangeState(idleState);
+    }
+
+    public void TryEnterBattleState(Transform player)
+    {
+        if (stateMachine.currentState == battleState || stateMachine.currentState == attackState)
+            return;
+
+        this.player = player;
+        stateMachine.ChangeState(battleState);
+    }
+
+    public Transform GetPlayerReference()
+    {
+        if (player == null)
+            player = PlayerDetected().transform;
+
+        return player;
+    }
 
     public RaycastHit2D PlayerDetected()
     {
@@ -50,5 +90,15 @@ public class Enemy : Entity
         Gizmos.DrawLine(playerCheck.position, new Vector3(playerCheck.position.x + (attackDistance * facingDir), playerCheck.position.y));
         Gizmos.color = Color.green;
         Gizmos.DrawLine(playerCheck.position, new Vector3(playerCheck.position.x + (minRetreatDistance * facingDir), playerCheck.position.y));
+    }
+
+    private void OnEnable()
+    {
+        Player.OnPlayerDeath += HandlePlayerDeath;
+    }
+
+    private void OnDisable()
+    {
+        Player.OnPlayerDeath -= HandlePlayerDeath;
     }
 }

@@ -12,9 +12,11 @@ public class Enemy_BattleState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        
+        UpdateBattleTimer();
 
         if (player == null)
-            player = enemy.PlayerDetected().transform;
+            player = enemy.GetPlayerReference();
 
         if (ShouldRetreat())
         {
@@ -76,7 +78,7 @@ public class Enemy_BattleState : EnemyState
 
         float dx = player.position.x - enemy.transform.position.x;
         const float deadZone = 0.15f;
-        
+
         if (Mathf.Abs(dx) < deadZone)
             return 0; // «над головой» — не принимаем сторону
 
