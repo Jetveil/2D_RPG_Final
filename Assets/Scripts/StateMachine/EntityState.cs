@@ -11,7 +11,7 @@ public abstract class EntityState
     protected Rigidbody2D rb;
 
 
-    protected float stateTimer;
+    [SerializeField] protected float stateTimer;
     protected bool triggerCalled;
 
     public EntityState(StateMachine stateMachine, string animBoolName)

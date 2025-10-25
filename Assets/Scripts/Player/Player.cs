@@ -24,6 +24,7 @@ public class Player : Entity
     public Player_BasicAttackState basicAttackState { get; private set; }
     public Player_JumpAttack_State jumpAttackState { get; private set; }
     public Player_DeadState deadState { get; private set; }
+    public Player_CounterAttackState counterAttackState  { get; private set; }
 
 
     [Header("Attack Settings")]
@@ -62,6 +63,7 @@ public class Player : Entity
         basicAttackState = new Player_BasicAttackState(this, stateMachine, "basicAttack");
         jumpAttackState = new Player_JumpAttack_State(this, stateMachine, "jumpAttack");
         deadState = new Player_DeadState(this, stateMachine, "dead");
+        counterAttackState = new Player_CounterAttackState(this, stateMachine, "counterAttack");
     }
 
     override protected void Start()

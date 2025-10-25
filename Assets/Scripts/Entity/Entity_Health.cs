@@ -1,18 +1,17 @@
 using System;
 using UnityEditor.ShaderGraph.Drawing;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Entity_Health : MonoBehaviour, IDamageable
 {
+    private Slider healthBar;
     private Entity_VFX enemyVFX;
     private Entity entity;
+    private Entity_Stats stats;
 
-    [SerializeField]
-    protected float currentHealth;
-    [SerializeField]
-    protected float maxHealth = 100;
-    [SerializeField]
-    protected bool isDead;
+    [SerializeField] protected float currentHealth;
+    [SerializeField] protected bool isDead;
 
     [Header("On Damage Knockback")]
     [SerializeField]
@@ -32,9 +31,21 @@ public class Entity_Health : MonoBehaviour, IDamageable
     {
         enemyVFX = GetComponent<Entity_VFX>();
         entity = GetComponent<Entity>();
+        stats = GetComponent<Entity_Stats>();
+        healthBar = GetComponentInChildren<Slider>();
 
-        currentHealth = maxHealth;
+        currentHealth = stats.GetMaxHealth();
+        UpdateHealthBar();
     }
+
+    private void UpdateHealthBar()
+    {
+        if (healthBar == null)
+            return;
+
+        healthBar.value = currentHealth / stats.GetMaxHealth();
+    }
+
 
     public virtual void TakeDamage(float damage, Transform damageDealer)
     {
@@ -51,6 +62,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
     protected void ReduceHealth(float damage)
     {
         currentHealth -= damage;
+        UpdateHealthBar();
 
         if (currentHealth <= 0)
             Die();
@@ -73,7 +85,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
     }
 
 
-    private bool IsHeavyDamage(float damage) => damage / maxHealth >= heavyDamageThreshold;
+    private bool IsHeavyDamage(float damage) => damage / stats.GetMaxHealth() >= heavyDamageThreshold;
 
     private float CalculateKnockbackDuration(float damage)
     {
