@@ -469,7 +469,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691905821
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3f4c31abd07c97d488b6687bccd4a35b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -724,7 +724,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1524103119
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f55d84cca3c802c43add7191c1bc2918, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -921,6 +921,7 @@ GameObject:
   - component: {fileID: 542495766}
   - component: {fileID: 542495767}
   - component: {fileID: 542495769}
+  - component: {fileID: 542495771}
   - component: {fileID: 542495770}
   m_Layer: 7
   m_Name: Enemy_Skeleton
@@ -928,7 +929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &542495764
 Transform:
   m_ObjectHideFlags: 0
@@ -1062,7 +1063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1149ee8a33630a4fa1ed0066b1427d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
   targetCheck: {fileID: 1669152867}
   targetCheckRadius: 1
   whatIsTarget:
@@ -1102,8 +1102,56 @@ MonoBehaviour:
   onDamageMaterial: {fileID: 2100000, guid: 5454b495b37c9744fb6ea2322bff8b5c, type: 2}
   onDamageVFXDuration: 0.2
   hitVfx: {fileID: 8975355400771503405, guid: 3f459e5caa7d6e24ba4fcf67fb3b2fe8, type: 3}
-  hitVfxColor: {r: 0.7735849, g: 0.7692061, b: 0.7692061, a: 1}
+  critHitVfx: {fileID: 7869858085924277671, guid: 640ff40936f2d7549a9c9138f74e2d7c, type: 3}
+  hitVfxColor: {r: 0.7433963, g: 0.0939765, b: 0.23780218, a: 1}
   attackAlert: {fileID: 1907994284}
+--- !u!114 &542495771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542495763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9306839d176a1c94585a907d5f3dbeb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth:
+    baseValue: 10000
+  major:
+    strength:
+      baseValue: 0
+    agility:
+      baseValue: 0
+    intelligence:
+      baseValue: 0
+    vitality:
+      baseValue: 0
+  defense:
+    evasion:
+      baseValue: 0
+    armor:
+      baseValue: 0
+    iceRes:
+      baseValue: 0
+    fireRes:
+      baseValue: 0
+    lightningRes:
+      baseValue: 0
+  offense:
+    damage:
+      baseValue: 10
+    critPower:
+      baseValue: 0
+    critChance:
+      baseValue: 60
+    fireDamage:
+      baseValue: 0
+    iceDamage:
+      baseValue: 0
+    lightningDamage:
+      baseValue: 0
 --- !u!1 &605853702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +1278,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000cff7d75a893352041b80aa7ce5629c5be390279b
+  m_ApplyToSortingLayers: 00000000cff7d75a893352041b80aa7ce5629c5be390279bd1855899
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1414,6 +1462,7 @@ MonoBehaviour:
   onDamageMaterial: {fileID: 2100000, guid: 5454b495b37c9744fb6ea2322bff8b5c, type: 2}
   onDamageVFXDuration: 0.2
   hitVfx: {fileID: 0}
+  critHitVfx: {fileID: 0}
   hitVfxColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &786393576
 GameObject:
@@ -1659,7 +1708,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1524103119
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 090d15575030c274b814f64ce2a6b204, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1824,7 +1873,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1524103119
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 090d15575030c274b814f64ce2a6b204, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2074,7 +2123,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1524103119
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.003125012, y: 0.004687488, z: 0}
@@ -8171,7 +8220,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1524103119
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f55d84cca3c802c43add7191c1bc2918, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8540,7 +8589,8 @@ MonoBehaviour:
   onDamageMaterial: {fileID: 2100000, guid: 5454b495b37c9744fb6ea2322bff8b5c, type: 2}
   onDamageVFXDuration: 0.15
   hitVfx: {fileID: 8975355400771503405, guid: 3f459e5caa7d6e24ba4fcf67fb3b2fe8, type: 3}
-  hitVfxColor: {r: 0.8634115, g: 0.8792453, b: 0.03151999, a: 1}
+  critHitVfx: {fileID: 7869858085924277671, guid: 640ff40936f2d7549a9c9138f74e2d7c, type: 3}
+  hitVfxColor: {r: 0.8283019, g: 0.9356132, b: 1, a: 1}
 --- !u!114 &1372540779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8553,7 +8603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f2cfdf1b6b34e4e81cec4d88566675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
   targetCheck: {fileID: 1817015487}
   targetCheckRadius: 1
   whatIsTarget:
@@ -8572,8 +8621,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9306839d176a1c94585a907d5f3dbeb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
-  vitality: 7
+  maxHealth:
+    baseValue: 10000
+  major:
+    strength:
+      baseValue: 0
+    agility:
+      baseValue: 0
+    intelligence:
+      baseValue: 0
+    vitality:
+      baseValue: 10
+  defense:
+    evasion:
+      baseValue: 0
+    armor:
+      baseValue: 0
+    iceRes:
+      baseValue: 0
+    fireRes:
+      baseValue: 0
+    lightningRes:
+      baseValue: 0
+  offense:
+    damage:
+      baseValue: 10
+    critPower:
+      baseValue: 250
+    critChance:
+      baseValue: 50
+    fireDamage:
+      baseValue: 0
+    iceDamage:
+      baseValue: 0
+    lightningDamage:
+      baseValue: 0
 --- !u!1 &1374286084
 GameObject:
   m_ObjectHideFlags: 0
@@ -8607,7 +8689,7 @@ RectTransform:
   m_Father: {fileID: 222789963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.07299805, y: 0.032999992}
   m_SizeDelta: {x: -1.615, y: 4.875}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8879,7 +8961,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1536975589
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7928858964255100155, guid: 7492c53fb70463a43be2114bbb26865c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9745,7 +9827,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2091548699
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.0078125, z: 0}
@@ -29848,7 +29930,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1524103119
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f55d84cca3c802c43add7191c1bc2918, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -29935,7 +30017,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1536975589
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 1
   m_Sprite: {fileID: 3084388393096246226, guid: 0d7c17515d218b842ba5213a9e70bdf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -30178,7 +30260,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1524103119
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 090d15575030c274b814f64ce2a6b204, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

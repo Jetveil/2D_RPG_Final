@@ -12,13 +12,15 @@ public class Chest : MonoBehaviour, IDamageable
     [SerializeField]
     private Vector2 knockbackForce;
 
-    public void TakeDamage(float damage, Transform damageDealer)
+    public bool TakeDamage(float damage, Transform damageDealer)
     {
         anim.SetBool("chestOpen", true);
         rb.linearVelocity = knockbackForce;
         rb.angularVelocity = Random.Range(-200f, 200f);
 
         entityVFX.PlayOnDamageVFX();
+
+        return true;
     }
 
 }

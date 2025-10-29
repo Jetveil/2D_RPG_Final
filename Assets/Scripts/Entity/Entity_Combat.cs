@@ -5,8 +5,8 @@ using Debug = UnityEngine.Debug;
 
 public class Entity_Combat : MonoBehaviour
 {
-    public float damage = 10f;
     private Entity_VFX vfx;
+    private Entity_Stats stats;
 
     [Header("Target Detection")]
     [SerializeField]
@@ -18,7 +18,8 @@ public class Entity_Combat : MonoBehaviour
 
     private void Awake()
     {
-        vfx = gameObject.GetComponent<Entity_VFX>();
+        vfx = GetComponent<Entity_VFX>();
+        stats = GetComponent<Entity_Stats>();
     }
 
     public void PerformAttack()
@@ -30,8 +31,11 @@ public class Entity_Combat : MonoBehaviour
             if (damageable == null)
                 continue;
 
-            damageable.TakeDamage(damage, transform);
-            vfx.CreateOnHitVFX(target.transform);
+            float damage = stats.GetPhysicalDamage(out bool isCrit);
+            bool targetGotHit = damageable.TakeDamage(damage, transform);
+
+            if (targetGotHit)
+                vfx.CreateOnHitVFX(target.transform, isCrit);
         }
     }
 

@@ -2,6 +2,8 @@ using System;
 using UnityEditor.ShaderGraph.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
+// using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class Entity_Health : MonoBehaviour, IDamageable
 {
@@ -47,17 +49,27 @@ public class Entity_Health : MonoBehaviour, IDamageable
     }
 
 
-    public virtual void TakeDamage(float damage, Transform damageDealer)
+    public virtual bool TakeDamage(float damage, Transform damageDealer)
     {
         if (isDead)
-            return;
+            return false;
+
+        if (AttackEvaded())
+        {
+            Debug.Log($"{gameObject.name} evaded the attack!");
+            return false;
+        }
 
         Vector2 knockback = CalculateKnockback(damage, damageDealer);
 
         entity?.ReceiveKnockback(knockback, CalculateKnockbackDuration(damage));
         enemyVFX?.PlayOnDamageVFX();
         ReduceHealth(damage);
+
+        return true;
     }
+
+    private bool AttackEvaded() => Random.Range(0, 100) < stats.GetEvasion();
 
     protected void ReduceHealth(float damage)
     {
