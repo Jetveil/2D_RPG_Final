@@ -19,25 +19,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityMentor_Chat.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync_fixed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OnHitVFX.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OnHitVFX.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy_Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy_Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Combat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Combat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_VFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_VFX.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity_Stats.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity_Stats.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IDamageable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX_Autocontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX_Autocontroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnityMentor_Chat.md" beforeDir="false" afterPath="$PROJECT_DIR$/UnityMentor_Chat.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
     </list>
@@ -83,10 +76,12 @@
     <setting file="file://$USER_HOME$/AppData/Local/Temp/a13730ad-1ecd-4dad-b505-683d99c16731_LatestCode.zip.731/Assets/Scripts/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/ad9be9c5-e2ea-42db-a705-388ceb50eb7c_LatestCode.zip.b7c/Assets/Scripts/Enemy_AttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/136540882b2e44dc88ac4ba62db1ab6a2fc00/b7/1aad43ad/Rigidbody2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/a1/ba750fb5/IComparable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b5/bd5364c1/Void.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/bf/056add9c/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ce25f60185214755aecd20f4c928c90e1eae00/07/40faffa6/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ce25f60185214755aecd20f4c928c90e1eae00/67/0c43f535/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ce25f60185214755aecd20f4c928c90e1eae00/7a/b416e6e7/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Roaming/LM Studio/config.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Animations.meta" root0="FORCE_HIGHLIGHTING" />
@@ -95,6 +90,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Graphics.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Graphics/Player_Graphics.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ElementType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStates.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStates/Enemy_AttackState.cs.meta" root0="FORCE_HIGHLIGHTING" />
@@ -104,6 +100,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy_Skeleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Combat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Entity_VFX.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity_StatusHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStates/Player_DeadState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player_Combat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatSystem/Stat_DefenseGroup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -113,6 +110,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@089d78c497f7/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="proportion" value="0.46114433" />
@@ -129,28 +130,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;ShowUsagesActions.previewPropertyKey&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main-revert&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.17782657&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "ShowUsagesActions.previewPropertyKey": "true",
+    "git-widget-placeholder": "main-revert",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.folding",
+    "settings.editor.splitter.proportion": "0.17782657",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RiderProblemsViewState">
+    <hideBySeverity>
+      <option value="11" />
+      <option value="12" />
+      <option value="13" />
+      <option value="14" />
+    </hideBySeverity>
+    <option name="showPreview" value="true" />
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.1.14f1\Editor\Unity.exe" />
@@ -349,7 +359,16 @@
       <workItem from="1761297172790" duration="45037000" />
       <workItem from="1761561796960" duration="8572000" />
       <workItem from="1761638809143" duration="7889000" />
-      <workItem from="1761736576509" duration="3300000" />
+      <workItem from="1761736576509" duration="13383000" />
+      <workItem from="1761901100316" duration="495000" />
+      <workItem from="1761901670600" duration="96000" />
+      <workItem from="1761901791743" duration="20486000" />
+      <workItem from="1761985651493" duration="5414000" />
+      <workItem from="1761998912829" duration="6963000" />
+      <workItem from="1762078322411" duration="33693000" />
+      <workItem from="1762364818734" duration="3923000" />
+      <workItem from="1762371604623" duration="462000" />
+      <workItem from="1762410543404" duration="3395000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -471,14 +490,16 @@
       <option name="project" value="LOCAL" />
       <updated>1761386376756</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Physical damage &amp; physical attack (+vfx_ done">
+      <option name="closed" value="true" />
+      <created>1761741392843</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1761741392843</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
-  </component>
-  <component name="TerminalProjectNonSharedOptionsProvider">
-    <envs>
-      <env key="TERM" value="xterm-256color" />
-      <env key="COLORTERM" value="=truecolor" />
-    </envs>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -533,7 +554,8 @@
     <MESSAGE value="Combat/Health files added" />
     <MESSAGE value="Reorganize player states, add dead state and stun animations for skeleton enemy." />
     <MESSAGE value="Combat System done, Stat System started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Combat System done, Stat System started" />
+    <MESSAGE value="Physical damage &amp; physical attack (+vfx_ done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Physical damage &amp; physical attack (+vfx_ done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

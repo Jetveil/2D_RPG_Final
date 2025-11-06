@@ -16,24 +16,19 @@ public class Entity : MonoBehaviour
 
 
     [Header("Collision Detection")]
-    [SerializeField]
-    protected LayerMask whatIsGround;
-    [SerializeField]
-    private float groundCheckDistance;
-    [SerializeField]
-    private float wallCheckDistance;
-    [SerializeField]
-    private Transform groundCheck;
-    [SerializeField]
-    private Transform primaryWallCheck;
-    [SerializeField]
-    private Transform secondaryWallCheck;
+    [SerializeField] protected LayerMask whatIsGround;
+    [SerializeField] private float groundCheckDistance;
+    [SerializeField] private float wallCheckDistance;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform primaryWallCheck;
+    [SerializeField] private Transform secondaryWallCheck;
     public bool groundDetected { get; private set; }
     public bool wallDetected { get; private set; }
 
     // Condition variables
     private bool isKnocked;
     private Coroutine knockbackCoroutine;
+    private Coroutine slowDownCo;
 
 
     /// <summary>
@@ -64,6 +59,19 @@ public class Entity : MonoBehaviour
 
     public virtual void EntityDeath()
     {
+    }
+
+    public virtual void SlowDownEntity(float duration, float slowMultiplier)
+    {
+        if (slowDownCo != null)
+            StopCoroutine(slowDownCo);
+
+        slowDownCo = StartCoroutine(SlowDownEntityCo(duration, slowMultiplier));
+    }
+
+    protected virtual IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
+    {
+        yield return null;
     }
 
     public void ReceiveKnockback(Vector2 knockback, float duration)

@@ -923,6 +923,7 @@ GameObject:
   - component: {fileID: 542495769}
   - component: {fileID: 542495771}
   - component: {fileID: 542495770}
+  - component: {fileID: 542495772}
   m_Layer: 7
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
@@ -1068,6 +1069,8 @@ MonoBehaviour:
   whatIsTarget:
     serializedVersion: 2
     m_Bits: 256
+  defaultDuration: 3
+  chillSlowMultiplier: 0.4
 --- !u!114 &542495769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +1107,7 @@ MonoBehaviour:
   hitVfx: {fileID: 8975355400771503405, guid: 3f459e5caa7d6e24ba4fcf67fb3b2fe8, type: 3}
   critHitVfx: {fileID: 7869858085924277671, guid: 640ff40936f2d7549a9c9138f74e2d7c, type: 3}
   hitVfxColor: {r: 0.7433963, g: 0.0939765, b: 0.23780218, a: 1}
+  chillVfx: {r: 0, g: 0.64705884, b: 1, a: 1}
   attackAlert: {fileID: 1907994284}
 --- !u!114 &542495771
 MonoBehaviour:
@@ -1118,7 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 10000
+    baseValue: 1000
   major:
     strength:
       baseValue: 0
@@ -1141,17 +1145,31 @@ MonoBehaviour:
       baseValue: 0
   offense:
     damage:
-      baseValue: 10
+      baseValue: 50
     critPower:
       baseValue: 0
     critChance:
-      baseValue: 60
+      baseValue: 0
+    armorReduction:
+      baseValue: 0
     fireDamage:
       baseValue: 0
     iceDamage:
-      baseValue: 0
+      baseValue: 10
     lightningDamage:
-      baseValue: 0
+      baseValue: 5
+--- !u!114 &542495772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542495763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af4529e13339d74ba885e8fdf3cfada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &605853702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1482,7 @@ MonoBehaviour:
   hitVfx: {fileID: 0}
   critHitVfx: {fileID: 0}
   hitVfxColor: {r: 1, g: 1, b: 1, a: 1}
+  chillVfx: {r: 0, g: 1, b: 1, a: 1}
 --- !u!1 &786393576
 GameObject:
   m_ObjectHideFlags: 0
@@ -8430,6 +8449,7 @@ GameObject:
   - component: {fileID: 1372540777}
   - component: {fileID: 1372540780}
   - component: {fileID: 1372540778}
+  - component: {fileID: 1372540781}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -8591,6 +8611,7 @@ MonoBehaviour:
   hitVfx: {fileID: 8975355400771503405, guid: 3f459e5caa7d6e24ba4fcf67fb3b2fe8, type: 3}
   critHitVfx: {fileID: 7869858085924277671, guid: 640ff40936f2d7549a9c9138f74e2d7c, type: 3}
   hitVfxColor: {r: 0.8283019, g: 0.9356132, b: 1, a: 1}
+  chillVfx: {r: 0, g: 0.64421606, b: 1, a: 1}
 --- !u!114 &1372540779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8608,6 +8629,8 @@ MonoBehaviour:
   whatIsTarget:
     serializedVersion: 2
     m_Bits: 128
+  defaultDuration: 3
+  chillSlowMultiplier: 0.4
   counterRecovery: 0.25
 --- !u!114 &1372540780
 MonoBehaviour:
@@ -8622,7 +8645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 10000
+    baseValue: 100000
   major:
     strength:
       baseValue: 0
@@ -8631,7 +8654,7 @@ MonoBehaviour:
     intelligence:
       baseValue: 0
     vitality:
-      baseValue: 10
+      baseValue: 0
   defense:
     evasion:
       baseValue: 0
@@ -8645,17 +8668,31 @@ MonoBehaviour:
       baseValue: 0
   offense:
     damage:
-      baseValue: 10
-    critPower:
-      baseValue: 250
-    critChance:
       baseValue: 50
+    critPower:
+      baseValue: 0
+    critChance:
+      baseValue: 0
+    armorReduction:
+      baseValue: 0
     fireDamage:
       baseValue: 0
     iceDamage:
-      baseValue: 0
+      baseValue: 50
     lightningDamage:
       baseValue: 0
+--- !u!114 &1372540781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372540770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af4529e13339d74ba885e8fdf3cfada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1374286084
 GameObject:
   m_ObjectHideFlags: 0

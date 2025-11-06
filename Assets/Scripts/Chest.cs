@@ -12,7 +12,7 @@ public class Chest : MonoBehaviour, IDamageable
     [SerializeField]
     private Vector2 knockbackForce;
 
-    public bool TakeDamage(float damage, Transform damageDealer)
+    public bool TakeDamage(float damage, float elementalDamage, ElementType element, Transform damageDealer)
     {
         anim.SetBool("chestOpen", true);
         rb.linearVelocity = knockbackForce;

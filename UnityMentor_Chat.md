@@ -428,3 +428,627 @@ public class VfxSpawner : MonoBehaviour
 **Улучшения**
 - По запросу: настроить единый слой `VFX_Overlay` и конвенции по `Order in Layer` (например, тела = 0, оружие = 5, VFX = 50),
   добавить тонкую логику: если удар «под ногами» — сортировать ниже, если «в воздухе» — выше, и т.д.
+---
+## Почему доступен elementalDamage в логе — 2025-10-31 16:54:15
+
+**Текст заданного вопроса**
+- Assets/Scripts/Entity/Entity_Health.cs Почему я имею доступ к `elementalDamage` в `Debug.Log($"Elemental damage: {elementalDamage}");`
+
+**Доступное и подробное объяснение**
+- Коротко: потому что `elementalDamage` — это параметр метода `TakeDamage` и он находится в области видимости тела этого метода. Любой код внутри `TakeDamage(...) { ... }` (включая `Debug.Log`) может обратиться к параметрам по имени.
+- В проекте интерфейс `IDamageable` задаёт сигнатуру: `bool TakeDamage(float damage, float elementalDamage, Transform damageDealer);` Поэтому и базовый класс `Entity_Health`, и наследники (например, `Enemy_Health`) получают этот параметр и могут им пользоваться внутри переопределённого метода.
+- Аналогия: метод — это «кухня», а параметры — «продукты», которые занесли в эту кухню. Пока вы не вышли из метода, они перед глазами.
+- Подводные камни:
+  - Параметр доступен только внутри метода. В другом методе класса его не видно — нужно либо передать его параметром, либо сохранить во внутреннем поле.
+  - Если в классе есть поле с таким же именем, параметр «затенит» поле (shadowing). Тогда к полю обращаются как `this.elementalDamage`.
+- Замечание по коду: в `Assets/Scripts/Entity/Entity_Combat.cs` есть вызов `damageable.TakeDamage(damage, elementalDamage, transform);`, но локальная переменная `elementalDamage` там не объявлена. Источником для неё, судя по коду, должен быть `stats.GetElementalDamage()`.
+
+**Исправление**
+```csharp
+// Вставьте лог прямо внутри метода, где параметр виден
+// Assets/Scripts/Entity/Entity_Health.cs
+public virtual bool TakeDamage(float damage, float elementalDamage, Transform damageDealer)
+{
+    if (isDead)
+        return false;
+
+    Debug.Log($"Elemental damage: {elementalDamage}"); // параметр доступен внутри метода
+
+    // ... остальная логика
+    return true;
+}
+```
+
+```csharp
+// Минимальный рабочий фикс источника elementalDamage
+// Assets/Scripts/Entity/Entity_Combat.cs
+public void PerformAttack() 
+{
+    foreach (var target in GetDetectedColliders())
+    {
+        IDamageable damageable = target.GetComponent<IDamageable>();
+        if (damageable == null)
+            continue;
+
+        float damage = stats.GetPhysicalDamage(out bool isCrit);
+        float elementalDamage = stats.GetElementalDamage(); // <-- объявляем и считаем
+
+        bool targetGotHit = damageable.TakeDamage(damage, elementalDamage, transform);
+        if (targetGotHit)
+            vfx.CreateOnHitVFX(target.transform, isCrit);
+    }
+}
+```
+
+```csharp
+// Если нужно использовать elementalDamage в других методах Entity_Health,
+// сохраните его в поле при получении (вариант по необходимости)
+// Assets/Scripts/Entity/Entity_Health.cs
+public class Entity_Health : MonoBehaviour, IDamageable
+{
+    private float lastElementalDamage; // хранение последнего значения
+
+    public virtual bool TakeDamage(float damage, float elementalDamage, Transform damageDealer)
+    {
+        lastElementalDamage = elementalDamage; // теперь доступно вне этого метода
+        // ...
+        return true;
+    }
+
+    private void SomeOtherMethod()
+    {
+        Debug.Log($"Last elemental damage: {lastElementalDamage}");
+    }
+}
+```
+
+Почему это сработает:
+- Параметр по определению виден в теле метода — лог корректен. Добавление объявления `elementalDamage` в `Entity_Combat` убирает потенциальную ошибку «имя не существует в текущем контексте» и передаёт корректное значение от атакующего.
+
+**Улучшения**
+- По запросу: можем учесть резисты цели (например, через `Entity_Stats` защитной группы) и посчитать вклад `elementalDamage` в `finalDamage`. Также можно перейти на `Physics2D.OverlapCircleNonAlloc` для снижения аллокаций в бою.
+---
+## Равные elemental бонусы: учёт 0.5 у слабых — 2025-10-31 17:36:48
+
+**Текст заданного вопроса**
+- Assets/Scripts/Entity/Entity_Stats.cs необходимо добавить проверку, чтобы при одинаковых занчениях bonusFire, bonusIce and bonusLightning одно из них учитывалось как highestDamage, а два других как .5 в weakerElementsDamage. Сейчас если значения равны, то бонус не считается совсем
+
+**Доступное и подробное объяснение**
+- Сейчас `GetElementalDamage()` берёт строго наибольший элемент у трёх (`fire/ice/lightning`) и игнорирует остальные. При равенстве используется первый по порядку, а «бонус» от других стихий не добавляется.
+- Что нужно: при равенстве максимумов выбрать одну стихию как `highestDamage` (детерминированно, например Fire > Ice > Lightning), а остальные равные максимумы учесть как «ослабленные» с коэффициентом `0.5` и сложить в `weakerElementsDamage`. Итог: `final = highest + weaker*0.5 + intelligence`.
+- Нюанс с float: использовать `Mathf.Approximately` (или небольшой `epsilon`), чтобы корректно ловить «равенство» для вещественных чисел.
+
+**Исправление**
+```csharp
+// Assets/Scripts/Entity/Entity_Stats.cs
+public float GetElementalDamage()
+{
+    float fireDamage = offense.fireDamage.GetValue();
+    float iceDamage = offense.iceDamage.GetValue();
+    float lightningDamage = offense.lightningDamage.GetValue();
+    float bonusElementalDamage = major.intelligence.GetValue();
+
+    float maxDamage = Mathf.Max(fireDamage, Mathf.Max(iceDamage, lightningDamage));
+    if (maxDamage <= 0)
+        return 0;
+
+    // Флаги равенства максимуму (с допуском для float)
+    bool fireIsMax = Mathf.Approximately(fireDamage, maxDamage);
+    bool iceIsMax = Mathf.Approximately(iceDamage, maxDamage);
+    bool lightningIsMax = Mathf.Approximately(lightningDamage, maxDamage);
+
+    // Выбираем детерминированно один «главный» максимум: Fire > Ice > Lightning
+    float highestDamage;
+    const float weakerFactor = 0.5f;
+    float weakerElementsDamage = 0f;
+
+    if (fireIsMax)
+    {
+        highestDamage = fireDamage;
+        fireIsMax = false; // «потребили» его как главный
+    }
+    else if (iceIsMax)
+    {
+        highestDamage = iceDamage;
+        iceIsMax = false;
+    }
+    else
+    {
+        highestDamage = lightningDamage;
+        lightningIsMax = false;
+    }
+
+    // Все оставшиеся равные максимумы считаем как «слабые» с коэффициентом 0.5
+    if (fireIsMax)      weakerElementsDamage += fireDamage * weakerFactor;
+    if (iceIsMax)       weakerElementsDamage += iceDamage * weakerFactor;
+    if (lightningIsMax) weakerElementsDamage += lightningDamage * weakerFactor;
+
+    float finalDamage = highestDamage + weakerElementsDamage + bonusElementalDamage;
+    return finalDamage;
+}
+```
+
+Почему сработает
+- При равенстве максимумов мы детерминированно выбираем один «главный» и корректно учитываем два других по `0.5`. При отсутствии равенства логика осталась прежней — берётся только один максимум.
+- `Mathf.Approximately` защищает от проблем сравнения float из разных источников (баффы, расчёты, округления).
+
+Нужно применить правку в файле? Подтвердите — и я пропатчу `Assets/Scripts/Entity/Entity_Stats.cs` автоматически.
+---
+## Минимальный фикс равных стихий (0.5) — 2025-10-31 17:43:29
+
+**Текст заданного вопроса**
+- Сейчас ты ввел свои переменные и переписал половину метода. Предложи простое и локаничное решение (можно без детерминации)
+
+**Доступное и подробное объяснение**
+- Сохраняем текущую идею: берём максимум из трёх стихий. Если есть ещё одна/две стихии, РОВНО равные максимуму, добавляем их по коэффициенту `0.5`. Не выбираем «главную» детерминированно — просто считаем количество равных максимумов.
+- Это локально: 2–3 строки логики поверх текущего кода, без перестройки структуры и доп. коллекций.
+
+**Исправление**
+```csharp
+// Assets/Scripts/Entity/Entity_Stats.cs
+public float GetElementalDamage()
+{
+    float fireDamage = offense.fireDamage.GetValue();
+    float iceDamage = offense.iceDamage.GetValue();
+    float lightningDamage = offense.lightningDamage.GetValue();
+    float bonusElementalDamage = major.intelligence.GetValue();
+
+    float maxDamage = Mathf.Max(fireDamage, Mathf.Max(iceDamage, lightningDamage));
+    if (maxDamage <= 0)
+        return 0;
+
+    // Подсчитываем, сколько стихий равны максимуму (с допуском для float)
+    int equals = 0;
+    if (Mathf.Approximately(fireDamage, maxDamage)) equals++;
+    if (Mathf.Approximately(iceDamage, maxDamage)) equals++;
+    if (Mathf.Approximately(lightningDamage, maxDamage)) equals++;
+
+    // Если есть дополнительные равные максимумы, учитываем их как 0.5 каждый
+    float weakerSum = (equals > 1) ? (equals - 1) * maxDamage * 0.5f : 0f;
+
+    return maxDamage + weakerSum + bonusElementalDamage;
+}
+```
+
+Почему это сработает
+- При 1 максимуме `equals == 1` и формула даёт базовый максимум без изменений.
+- При 2 или 3 равных максимумах «лишние» добавятся по `0.5` каждый, как вы и хотели.
+- Минимум кода, без ветвлений по «главной» стихии.
+
+Готов применить правку в файле `Assets/Scripts/Entity/Entity_Stats.cs`. Подтвердите — и я обновлю код.
+---
+## Как работает base.TakeDamage и wasHit — 2025-10-31 17:43:29
+
+**Текст заданного вопроса**
+- Assets/Scripts/Enemy/Enemy_Health.cs как работает  `bool wasHit = base.TakeDamage?`
+
+**Доступное и подробное объяснение**
+- Ключевое: `base.TakeDamage(...)` вызывает реализацию метода `TakeDamage` у базового класса (`Entity_Health`). Поскольку метод помечен `virtual` в базе и `override` в наследнике, вызов через `base` обеспечивает выполнение «общей» логики получения урона: проверка смерти/уклонения, расчёт брони, отбрасывание, VFX, уменьшение `currentHealth`.
+- Возвращаемое значение `bool` говорит, был ли урон фактически применён:
+  - `false` — цель уже мертва (`isDead == true`) или атака уклонена (`AttackEvaded()`), значит ничего дальше делать не нужно;
+  - `true` — урон прошёл: здоровье уменьшено, воспроизведены эффекты/отбрасывание.
+- В `Enemy_Health` это выглядит так:
+
+```csharp
+public override bool TakeDamage(float damage, float elementalDamage, Transform damageDealer)
+{
+    bool wasHit = base.TakeDamage(damage, elementalDamage, damageDealer);
+
+    if (wasHit == false)
+        return false; // база сказала: урон не применён → выходим
+
+    // Дополнительная логика врага после успешного попадания
+    if (damageDealer.GetComponent<Player>() != null)
+        enemy.TryEnterBattleState(damageDealer);
+
+    return true; // урон прошёл, расширенная логика выполнена
+}
+```
+
+- Аналогия: `base.TakeDamage` — «базовая касса» урона (списывает HP, эффекты). Если кассир отказал (уклонение/мертв), касса не пробивает чек — вы выходите. Если чек пробит, наследник добавляет «послепродажные» шаги (перевод врага в бой).
+- Подводные камни, на которые стоит обратить внимание (без правки кода сейчас):
+  - В `Entity_Health.TakeDamage` параметр `elementalDamage` пока не используется — позже его можно учесть в формуле финального урона с резистами.
+  - Внутри `Entity_Health.TakeDamage` берётся `attackerStats` через `GetComponent<Entity_Stats>()` у получателя урона. Логичнее получить статы атакующего от `damageDealer` (иначе редукция брони читается со стороны цели).
+
+**Исправление**
+- Вносить изменения не требуется: строка `bool wasHit = base.TakeDamage(...)` корректно получает результат из базового метода и управляет последующим потоком кода через ранний выход при `false`.
+---
+## Почему не срабатывает ApplyChilledEffect? — 2025-11-03 15:39:39
+
+**Текст заданного вопроса**
+- Почему не срабатывает ApplyChilledEffect? Assets/Scripts/Entity_StatusHandler.cs
+
+**Доступное и подробное объяснение**
+- Суть: вызов «ледяного» эффекта до цели либо не доходит, либо доходит, но визуально ничего не меняет. В проекте есть две основные причины:
+  - Поиск компонента на коллайдере. В `Assets/Scripts/Entity/Entity_Combat.cs:54` используется `target.GetComponent<Entity_StatusHandler>()`. Если коллайдер цели находится на дочернем объекте, а сам `Entity_StatusHandler` висит на родителе, `GetComponent` вернёт `null` и код выйдет раньше, чем вызовет `ApplyChilledEffect`.
+  - Пустая базовая реализация замедления. `Entity_StatusHandler.ApplyChilledEffect` вызывает `entity.SlowDownEntity(duration, slowMultiplier)`, но у базового `Entity` корутина `SlowDownEntityCo` пустая. То есть без переопределения в потомке замедление «ничего не делает». У `Enemy` есть override (замедляет `moveSpeed`, `battleMoveSpeed` и `anim.speed`), а у `Player` такого override нет — поэтому на игроке эффект «не срабатывает».
+- Дополнительно: в `Assets/Scripts/Entity_StatusHandler.cs` поле `currentEffect` нигде не устанавливается и не сбрасывается. Это не мешает самому вызову, но не даёт контролировать наложение/снятие статуса и потенциально вводит в заблуждение.
+- Как быстро проверить:
+  - Временно залогировать вызов: добавить `Debug.Log("Chill applied")` в `ApplyChilledEffect` и ударить цель — если лог не появляется, значит не нашли `StatusHandler` на цели.
+  - Проверить иерархию объекта: где `Collider2D` и где `Entity_StatusHandler`. Если хэндлер на родителе, нужен `GetComponentInParent`.
+  - Сравнить поведение на врагах и на игроке: враг замедляется (есть override), игрок — нет (override отсутствует).
+
+**Исправление**
+```csharp
+// 1) Гарантировать, что найдём StatusHandler на цели
+// Assets/Scripts/Entity/Entity_Combat.cs
+public void ApplyStatusEffect(Transform target, ElementType element)
+{
+    // Было:
+    // Entity_StatusHandler statusHandler = target.GetComponent<Entity_StatusHandler>();
+
+    // Стало: ищем на родителе (и себе), т.к. коллайдер часто на дочернем объекте
+    Entity_StatusHandler statusHandler = target.GetComponentInParent<Entity_StatusHandler>();
+
+    if (statusHandler == null)
+        return;
+
+    if (element == ElementType.Ice && statusHandler.CanBeApplied(ElementType.Ice))
+    {
+        statusHandler.ApplyChilledEffect(defaultDuration, chillSlowMultiplier);
+    }
+}
+```
+
+```csharp
+// 2) Реализовать фактическое замедление для Player
+// Assets/Scripts/Player/Player.cs
+using System.Collections;
+
+protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
+{
+    float originalMoveSpeed = moveSpeed;
+    float originalAnimSpeed = anim.speed;
+
+    float speedMultiplier = 1f - slowMultiplier; // при 0.2f получаем 80% скорости
+
+    moveSpeed *= speedMultiplier;
+    anim.speed *= speedMultiplier;
+
+    yield return new WaitForSeconds(duration);
+
+    moveSpeed = originalMoveSpeed;
+    anim.speed = originalAnimSpeed;
+}
+```
+
+```csharp
+// 3) (Опционально) Отметить и снимать статус внутри StatusHandler
+// Assets/Scripts/Entity_StatusHandler.cs
+using System.Collections;
+
+public void ApplyChilledEffect(float duration, float slowMultiplier)
+{
+    if (currentEffect != ElementType.None)
+        return; // уже под эффектом — не стакаем
+
+    currentEffect = ElementType.Ice;
+    entity.SlowDownEntity(duration, slowMultiplier);
+    StartCoroutine(ClearEffectAfter(duration));
+}
+
+private IEnumerator ClearEffectAfter(float duration)
+{
+    yield return new WaitForSeconds(duration);
+    currentEffect = ElementType.None;
+}
+```
+
+- Почему это сработает:
+  - `GetComponentInParent` устраняет проблему поиска хэндлера на родителе, когда удар приходится по дочернему коллайдеру.
+  - Переопределение `SlowDownEntityCo` в `Player` делает замедление реальным, как уже реализовано в `Enemy`.
+  - Управление `currentEffect` даёт предсказуемость: не стакаем повторно и корректно сбрасываем эффект по таймеру.
+
+Запрос на подтверждение
+- Следуя guardrails, править файлы в `Assets/` без согласия не буду. Подтвердите, пожалуйста, применить правки к трём местам выше? Могу внести точечные патчи и прогнать сцену.
+---
+## Как работает PlayStatusVfxCo пошагово — 2025-11-04 16:00:12
+
+**Текст заданного вопроса**
+- Assets/Scripts/Entity/Entity_VFX.cs как работает пошагово PlayStatusVfxCo?
+
+**Доступное и подробное объяснение**
+- Где вызывается: публичный метод `PlayOnStatusVFX(float duration, ElementType element)` решает, какой цвет эффекта применить, и запускает корутину `PlayStatusVfxCo(duration, chillVfx)` для `ElementType.Ice`.
+- Что делает корутина `PlayStatusVfxCo` пошагово:
+  1) Задаёт локальные параметры:
+     - `tickInterval = 0.25f` — период мигания.
+     - `timeHasPassed = 0` — накопленное время.
+  2) Готовит два оттенка выбранного цвета:
+     - `lightColor = effectColor * 1.2f` — чуть ярче.
+     - `darkColor = effectColor * 0.8f` — чуть темнее.
+  3) Вводит флаг `toggle = false` для переключения между светлым/тёмным.
+  4) Цикл пока `timeHasPassed < duration`:
+     - Устанавливает `sr.color = toggle ? lightColor : darkColor` — применяет один из оттенков к `SpriteRenderer`.
+     - Инвертирует `toggle = !toggle` — на следующем шаге будет другой оттенок.
+     - `yield return new WaitForSeconds(tickInterval)` — «усыпляет» корутину на четверть секунды (игровое время, зависит от `Time.timeScale`).
+     - Увеличивает накопленное время: `timeHasPassed += tickInterval`.
+  5) По завершении длительности сбрасывает цвет спрайта: `sr.color = Color.white`.
+
+- Аналогия: «мигалка». Каждые 0.25 сек спрайт перекрашивается попеременно в светлый/тёмный оттенок «льда», пока не истечёт таймер.
+
+- Важные детали и подводные камни:
+  - Сброс цвета жёстко в `Color.white`. Если исходный `SpriteRenderer.color` не белый (например, был тонирован), вы потеряете исходный оттенок. Надёжнее сохранить оригинальный цвет в `Awake` и восстанавливать его.
+  - Аллокации: `new WaitForSeconds(tickInterval)` создаётся в каждом тике — это лишние выделения памяти. Лучше кэшировать `WaitForSeconds` внутри корутины один раз на интервал.
+  - Параллельные вызовы: если `PlayOnStatusVFX` вызвать повторно до завершения прошлого эффекта, запустится вторая корутина и они начнут конфликтовать (цвет будет «перетягиваться»). Стоит хранить ссылку на текущую корутину и останавливать её перед запуском новой.
+  - Зависимость от TimeScale: `WaitForSeconds` учитывает `Time.timeScale`. Если игра на паузе (`timeScale = 0`), мигание остановится. Если нужно мигание «поверх паузы», используйте `WaitForSecondsRealtime`.
+
+**Исправление**
+```csharp
+// Без изменений проекта: показать безопасные улучшения логики
+// Assets/Scripts/Entity/Entity_VFX.cs (концепт)
+using System.Collections;
+using UnityEngine;
+
+public class Entity_VFX : MonoBehaviour
+{
+    private SpriteRenderer sr;
+    private Color originalSpriteColor;
+    private Coroutine statusVfxCo;
+
+    private void Awake()
+    {
+        sr = GetComponentInChildren<SpriteRenderer>();
+        originalSpriteColor = sr != null ? sr.color : Color.white;
+    }
+
+    public void PlayOnStatusVFX(float duration, ElementType element)
+    {
+        if (statusVfxCo != null)
+            StopCoroutine(statusVfxCo); // не допускаем конкурирующих корутин
+
+        if (element == ElementType.Ice)
+            statusVfxCo = StartCoroutine(PlayStatusVfxCo(duration, Color.cyan));
+    }
+
+    private IEnumerator PlayStatusVfxCo(float duration, Color effectColor)
+    {
+        const float tickInterval = 0.25f;
+        float timeHasPassed = 0f;
+
+        // Кэшируем инструкцию ожидания, чтобы не аллоцировать каждый тик
+        WaitForSeconds waitTick = new WaitForSeconds(tickInterval);
+
+        Color lightColor = effectColor * 1.2f;
+        Color darkColor = effectColor * 0.8f;
+        bool toggle = false;
+
+        while (timeHasPassed < duration)
+        {
+            if (sr != null)
+                sr.color = toggle ? lightColor : darkColor;
+            toggle = !toggle;
+
+            yield return waitTick;
+            timeHasPassed += tickInterval;
+        }
+
+        if (sr != null)
+            sr.color = originalSpriteColor; // корректный возврат к исходному цвету
+
+        statusVfxCo = null;
+    }
+}
+```
+
+- Почему это надёжнее:
+  - Восстанавливаем исходный цвет спрайта вместо принудительного белого.
+  - Кэшируем `WaitForSeconds` (меньше аллокаций каждой четверти секунды).
+  - Исключаем одновременные корутины одного эффекта (нет «борьбы за цвет»).
+  - По желанию можно заменить `WaitForSeconds` на `WaitForSecondsRealtime`, если эффект должен идти при паузе.
+---
+## Приветствие и формат работы UnityMentor 2D — 2025-11-06 09:29:10
+
+**Текст заданного вопроса**
+- «привет»
+
+**Доступное и подробное объяснение**
+- Привет! Я UnityMentor: помогу с Unity 6.1 (6000.1.14f1) по 2D-проекту. Расскажите, с чем помочь: настройка сцены, физика, анимации, скрипты, баг-репроды, оптимизация, архитектура состояний и т.д.
+- Можем начать с описания проблемы или показать, как запустить/проверить нужную сцену в `Assets/Scenes/`.
+
+**Исправление**
+```csharp
+// Сейчас исправления не требуются — это приветствие.
+```
+
+**Улучшения**
+- По запросу: предложу архитектуру/рефакторинг/тесты.
+---
+## Описать классы и методы в scripts — 2025-11-06 11:17:55
+
+**Текст заданного вопроса**
+- «Задай описание всем классам и методам (не в коде) в папке scripts (кроме базовых методов языка C# и Unity). Выведи в формате "Название класса \ метода - Описание"»
+
+**Доступное и подробное объяснение**
+- В корне проекта папка `scripts` не содержит C#-файлов; в Unity-проекте игровые скрипты лежат в `Assets/Scripts/`. Я прошёлся по `Assets/Scripts/` и описал все классы и их пользовательские методы.
+- Исключены базовые методы C#/Unity: `Awake`, `Start`, `Update`, `FixedUpdate`, `LateUpdate`, `OnEnable`, `OnDisable`, `OnDestroy`, `OnDrawGizmos` и т.п. (включая их переопределения). Остальные методы, относящиеся к игровой логике/состояниям/боёвке — включены.
+- Формат: «Имя класса или метода — краткое назначение». Для методов указан владелец: `Класс.Метод`.
+
+**Исправление**
+```csharp
+// Это документация/описания — изменений в код не вносилось.
+```
+
+**Описание (классы и методы)**
+
+ElementType — Перечисление элементов урона/эффектов (None/Fire/Ice/Lightning).
+
+Stat — Обёртка над числовым значением стата.
+Stat.GetValue — Возвращает текущее базовое значение стата.
+
+Stat_MajorGroup — Группа «основных» статов: сила/ловкость/интеллект/жизнь.
+
+Stat_OffenseGroup — Группа атакующих статов: физ.урон, крит.шанс/сила, редукция брони, элем.уроны.
+
+Stat_DefenseGroup — Группа защитных статов: уклонение, броня, элем.сопротивления.
+
+Entity — Базовый класс сущности: аниматор, Rigidbody2D, FSM, детект окружения, разворот.
+Entity.CallAnimationTrigger — Пробрасывает триггер из анимации в текущее состояние FSM.
+Entity.EntityDeath — Виртуальный хук реакции на смерть (переопределяется наследниками).
+Entity.SlowDownEntity — Запускает корутину временного замедления сущности.
+Entity.SlowDownEntityCo — Короутина: применяет и снимает замедление параметров.
+Entity.ReceiveKnockback — Применяет нокбэк на время (через корутину).
+Entity.SetVelocity — Устанавливает скорость и авто‑флип по знаку X.
+Entity.HandleFlip — Проверяет необходимость флипа по заданной X‑скорости.
+Entity.Flip — Поворачивает трансформ, меняет `facingDir`, вызывает `OnFlipped`.
+Entity.HandleCollisionDetection — Обновляет `groundDetected`/`wallDetected` рейкастами.
+
+Entity_Health — Управление здоровьем: приём урона, уклонение, нокбэк, смерть, UI‑полоса HP.
+Entity_Health.TakeDamage — Считает физ./элем.урон с бронёй/резистами, применяет нокбэк/VFX.
+Entity_Health.ReduceHealth — Уменьшает HP, обновляет UI, запускает VFX и проверяет смерть.
+Entity_Health.Die — Отмечает смерть и вызывает `Entity.EntityDeath`.
+Entity_Health.AttackEvaded — Возвращает, сработало ли уклонение по шансам.
+Entity_Health.TakeKnockback — Вычисляет и применяет нокбэк через Entity.
+Entity_Health.CalculateKnockback — Определяет силу/направление нокбэка по «тяжести» удара.
+Entity_Health.IsHeavyDamage — Проверяет, превышает ли урон порог «тяжёлого».
+Entity_Health.CalculateKnockbackDuration — Длительность нокбэка в зависимости от тяжести.
+Entity_Health.UpdateHealthBar — Обновляет значение слайдера HP.
+
+Entity_VFX — Визуальные эффекты сущности: «хит»-эффект, цвет по элементу, статус‑мигание.
+Entity_VFX.PlayOnStatusVFX — Запускает мигание спрайта цветом статуса на длительность.
+Entity_VFX.PlayStatusVfxCo — Короутина периодического изменения цвета спрайта.
+Entity_VFX.UpdateOnHitColor — Меняет цвет VFX попадания согласно элементу/сброс по None.
+Entity_VFX.CreateOnHitVFX — Спавнит VFX попадания/крита, задаёт цвет/флип по направлению.
+Entity_VFX.PlayOnDamageVFX — Включает «материал урона» на короткое время.
+Entity_VFX.OnDamageVFXCoroutine — Короутина временной замены материала.
+
+Entity_AnimationTriggers — Связка событий анимации с логикой Entity/Combat.
+Entity_AnimationTriggers.CurrentStateTrigger — Сообщает активному состоянию о триггере анимации.
+Entity_AnimationTriggers.AttackTrigger — Вызывает `Entity_Combat.PerformAttack`.
+
+Enemy_AnimationTriggers — Спецтриггеры врага: окно контратаки + визуальное предупреждение.
+Enemy_AnimationTriggers.EnableCounterWindow — Включает окно парирования и индикатор атаки.
+Enemy_AnimationTriggers.DisableCounterWindow — Выключает окно парирования и индикатор.
+
+Entity_Combat — Ближний бой: поиск целей, нанесение урона, статусы, VFX попадания.
+Entity_Combat.PerformAttack — Наносит урон всем целям в зоне; применяет статусы/VFX.
+Entity_Combat.ApplyStatusEffect — Применяет статус цели по элементу (лед — замедление).
+Entity_Combat.GetDetectedColliders — Возвращает цели в радиусе поражения.
+
+Entity_Stats — Хранит статы и вычисляет производные (урон/резисты/крит/уклонение/броня).
+Entity_Stats.GetElementalDamage — Выбирает доминирующий элемент и суммарный элем.урон.
+Entity_Stats.GetElementalResistance — Считает сопротивление к элементу с учётом капа.
+Entity_Stats.GetMaxHealth — Возвращает максимум HP с бонусами от `vitality`.
+Entity_Stats.GetArmorReduction — Возвращает множитель пробития брони (0..1).
+Entity_Stats.GetArmorMitigation — Долю поглощения урона (эффективная броня с капом).
+Entity_Stats.GetPhysicalDamage — Физ.урон с шансом/силой крита и бонусами от статов.
+Entity_Stats.GetEvasion — Шанс уклонения с капом.
+
+StateMachine — Менеджер конечного автомата: хранит/меняет текущее состояние.
+StateMachine.Initialize — Задаёт стартовое состояние и вызывает `Enter`.
+StateMachine.ChangeState — Делает `Exit` старого и `Enter` нового состояния.
+StateMachine.UpdateActiveState — Делегирует `Update` активному состоянию.
+StateMachine.SwitchOffStateMachine — Запрещает дальнейшие смены состояний.
+
+EntityState — Абстрактная база состояния сущности.
+EntityState.Enter — Включает аниматорный bool состояния, сбрасывает триггер.
+EntityState.Update — Тикает таймер состояния и обновляет аним‑параметры.
+EntityState.Exit — Выключает аниматорный bool состояния.
+EntityState.AnimationTrigger — Помечает, что пришёл триггер из анимации.
+EntityState.UpdateAnimationParams — Хук для установки параметров Animator.
+
+EnemyState — База состояний врага; связывает `rb/anim`, настраивает аним‑параметры.
+EnemyState.UpdateAnimationParams — Ставит множители скорости анимации/движения.
+
+Enemy — Класс врага: параметры ИИ/боя, набор состояний и взаимодействие с игроком.
+Enemy.SlowDownEntityCo — Короутина замедления (скорость бега/боя и скорость анимации).
+Enemy.EnableCounterWindow — Разрешает/запрещает «стан» от контрудара.
+Enemy.EntityDeath — Переводит врага в состояние смерти.
+Enemy.HandlePlayerDeath — Возвращает врага в idle при смерти игрока.
+Enemy.TryEnterBattleState — Переходит в бой, если не в бою/атаке; сохраняет ссылку на игрока.
+Enemy.GetPlayerReference — Лениво получает/кеширует `Transform` игрока.
+Enemy.PlayerDetected — Проверяет игрока лучом по направлению взгляда.
+
+Enemy_Skeleton — Конкретный тип врага; заполняет состояния; поддерживает контрудар.
+Enemy_Skeleton.HandleCounter — Переключает в оглушение, если окно контратаки активно.
+
+Enemy_VFX — Доп. VFX врага.
+Enemy_VFX.EnableAttackAlert — Вкл/выкл визуальный индикатор окна атаки.
+
+Enemy_Health — Наследник `Entity_Health` с реакцией на удар от игрока.
+Enemy_Health.TakeDamage — После удара игроком переводит врага в состояние боя.
+
+Player — Игрок: ввод, параметры движения/атаки, набор состояний.
+Player.SlowDownEntityCo — Короутина замедления: снижает move/jump/анимацию/импульсы атак.
+Player.EntityDeath — Посылает событие смерти и переводит в `DeadState`.
+Player.EnterAttackStateWithDelay — Ставит переход в базовую атаку на конец кадра.
+Player.EnterAttackStateWIthDelayCo — Короутина задержки входа в атаку на 1 кадр.
+
+Player_Combat — Боевая логика игрока для контрудара.
+Player_Combat.CounterAttackPerformed — Проверяет цель в зоне и вызывает `HandleCounter`.
+Player_Combat.GetCounterRecoveryDuration — Длительность «восстановления» после контрудара.
+
+Player_GroundedState — База наземных состояний игрока.
+Player_GroundedState.Update — Обрабатывает прыжок/атаку/контрудар и переход в падение.
+
+Player_IdleState — Ожидание на земле.
+Player_IdleState.Enter — Обнуляет скорость по входу в состояние.
+Player_IdleState.Update — Переходит в ходьбу при вводе, игнорирует, если упирается в стену.
+
+Player_MoveState — Движение по земле.
+Player_MoveState.Update — Двигает по X, переходит в idle при отпускании/касании стены.
+
+Player_JumpState — Фаза начала прыжка.
+Player_JumpState.Enter — Задаёт вертикальную скорость прыжка.
+Player_JumpState.Update — На спаде Y переходит в падение (если не jump‑attack).
+
+Player_AiredState — Общая логика «в воздухе».
+Player_AiredState.Update — Воздушный контроль по X; переход в jump‑attack по нажатию атаки.
+
+Player_FallState — Падение.
+Player_FallState.Update — Переходы: на землю (idle) или на стену (wall‑slide).
+
+Player_WallSlideState — Скольжение по стене.
+Player_WallSlideState.Update — Замедляет падение, переходы в прыжок от стены/падение/idle.
+Player_WallSlideState.HandleWallSlide — Управляет вертикальной скоростью с учётом ввода.
+
+Player_WallJumpState — Прыжок от стены.
+Player_WallJumpState.Enter — Придаёт импульс от стены и вверх.
+Player_WallJumpState.Update — Переходы в jump‑attack/падение/обратно на скольжение.
+
+Player_DashState — Рывок.
+Player_DashState.Enter — Настраивает длительность/направление, отключает гравитацию.
+Player_DashState.Update — Движение рывком; выход в idle/fall по таймеру; отмена по стене.
+Player_DashState.Exit — Восстанавливает гравитацию и скорость.
+Player_DashState.CancelDashIfNeeded — Отменяет рывок при касании стены.
+
+Player_BasicAttackState — Базовая серия ударов (комбо).
+Player_BasicAttackState.Enter — Ставит индекс комбо, применяет импульс, настраивает анимацию.
+Player_BasicAttackState.Update — Ведёт таймер импульса; ставит очередь следующего удара; логика выхода.
+Player_BasicAttackState.Exit — Обновляет индекс комбо и время последнего удара.
+Player_BasicAttackState.HandleStateExit — Переход к следующему удару или в idle.
+Player_BasicAttackState.QueueNextAttack — Ставит флажок продолжения комбо.
+Player_BasicAttackState.HandleAttackVelocity — Ведёт таймер импульса и сбрасывает скорость по окончании.
+Player_BasicAttackState.ApplyAttackVelocity — Применяет импульс текущего удара по направлению.
+Player_BasicAttackState.ResetComboIndexIfNeeded — Сбрасывает индекс комбо при пропуске окна.
+
+Player_JumpAttack_State — Атака в прыжке.
+Player_JumpAttack_State.Enter — Придаёт импульс и триггерит фазу удара.
+Player_JumpAttack_State.Update — Логика приземления и выход в idle по триггеру.
+
+Player_DeadState — Состояние смерти игрока.
+Player_DeadState.Enter — Отключает ввод и симуляцию физики.
+
+Player_CounterAttackState — Состояние контратаки.
+Player_CounterAttackState.Enter — Старт окна контрудара; фиксирует успех; настраивает анимацию.
+Player_CounterAttackState.Update — Держит игрока; выход по триггеру или по таймеру без успеха.
+
+ParallaxBackground — Контроллер параллакса: двигает и петлит слои по движению камеры.
+ParallaxBackground.CalculateImageLength — Кеширует ширину каждого слоя.
+
+ParallaxLayer — Описание слоя фона и логика движения/петли.
+ParallaxLayer.CalculateImageWidth — Вычисляет ширину спрайта для петли.
+ParallaxLayer.Move — Смещает слой по X с множителем.
+ParallaxLayer.LoopBackground — Перекидывает слой, если слой вышел за край камеры.
+
+UI_MiniHealthBar — Мини‑полоска HP над объектом, синхронизирована с разворотом.
+UI_MiniHealthBar.HandleFlip — Сбрасывает поворот, чтобы UI не зеркалился при флипе спрайта.
+
+Chest — Разрушаемый сундук: открывается и отлетает при ударе.
+Chest.TakeDamage — Запускает анимацию открытия, задаёт нокбэк/вращение и VFX.
+
+IDamageable — Интерфейс «получающего урон».
+IDamageable.TakeDamage — Сигнатура нанесения урона: физ/элем, тип, источник.
+
+ICounterable — Интерфейс «контрпринимаемого».
+ICounterable.CanBeCountered — Флаг окна уязвимости к контрудару.
+ICounterable.HandleCounter — Реакция на успешный контрудар.

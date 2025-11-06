@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -13,8 +14,7 @@ public class Enemy : Entity
     [Header("Stunned State details")]
     public float stunnedDuration = 1;
     public Vector2 stunnedVelocity = new Vector2(7, 7);
-    [SerializeField]
-    protected bool canBeStunned;
+    [SerializeField] protected bool canBeStunned;
 
     [Header("Battle Details")]
     public float battleMoveSpeed = 3;
@@ -31,13 +31,29 @@ public class Enemy : Entity
     public float moveAnimSpeedMultiplier = 1f;
 
     [Header("Player Detection")]
-    [SerializeField]
-    private LayerMask whatIsPlayer;
-    [SerializeField]
-    private Transform playerCheck;
-    [SerializeField]
-    private float playerCheckDistance = 10;
+    [SerializeField] private LayerMask whatIsPlayer;
+    [SerializeField] private Transform playerCheck;
+    [SerializeField] private float playerCheckDistance = 10;
     public Transform player { get; private set; }
+
+    protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
+    {
+        float originalMoveSpeed = moveSpeed;
+        float originalBattleMoveSpeed = battleMoveSpeed;
+        float originalAnimSpeed = anim.speed;
+
+        float speedMultiplier = 1 - slowMultiplier;
+
+        moveSpeed = moveSpeed * speedMultiplier;
+        battleMoveSpeed = battleMoveSpeed * speedMultiplier;
+        anim.speed = anim.speed * speedMultiplier;
+
+        yield return new WaitForSeconds(duration);
+
+        moveSpeed = originalMoveSpeed;
+        battleMoveSpeed = originalBattleMoveSpeed;
+        anim.speed = originalAnimSpeed;
+    }
 
     public void EnableCounterWindow(bool enable) => canBeStunned = enable;
 
