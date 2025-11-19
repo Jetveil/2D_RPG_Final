@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 3af4529e13339d74ba885e8fdf3cfada
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lightningStrikeVfx: {fileID: 6785127852233007867, guid: 3d291d1fbf7bedc4facfbb2a08893e57, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

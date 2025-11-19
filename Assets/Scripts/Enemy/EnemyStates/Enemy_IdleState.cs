@@ -6,6 +6,9 @@ public class Enemy_IdleState : Enemy_GroundedState
     {
     }
 
+    /// <summary>
+    /// Вход: ставит таймер простоя перед началом движения.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -14,6 +17,9 @@ public class Enemy_IdleState : Enemy_GroundedState
     }
 
 
+    /// <summary>
+    /// По истечении таймера переходит в движение.
+    /// </summary>
     public override void Update()
     {
         base.Update();

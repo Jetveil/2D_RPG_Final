@@ -8,6 +8,9 @@ public class Player_MoveState : Player_GroundedState
     {
     }
 
+    /// <summary>
+    /// Двигает по оси X и возвращается в idle при отсутствии ввода/упоре в стену.
+    /// </summary>
     public override void Update()
     {
         base.Update();

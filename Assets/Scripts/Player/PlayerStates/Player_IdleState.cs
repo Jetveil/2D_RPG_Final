@@ -7,6 +7,9 @@ public class Player_IdleState : Player_GroundedState
     {
     }
 
+    /// <summary>
+    /// Ставит скорость в ноль при входе в ожидание.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -14,6 +17,9 @@ public class Player_IdleState : Player_GroundedState
         player.SetVelocity(0, 0);
     }
 
+    /// <summary>
+    /// Переходит в движение при наличии ввода, игнорируя упор в стену.
+    /// </summary>
     public override void Update()
     {
         base.Update();

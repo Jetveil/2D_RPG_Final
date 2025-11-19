@@ -6,6 +6,9 @@ public class Enemy_MoveState : Enemy_GroundedState
     {
     }
 
+    /// <summary>
+    /// Вход: разворачивается, если упирается в край или стену.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -14,6 +17,9 @@ public class Enemy_MoveState : Enemy_GroundedState
             enemy.Flip();
     }
 
+    /// <summary>
+    /// Патрульное движение и реакции на пропадание земли/стену.
+    /// </summary>
     public override void Update()
     {
         base.Update();

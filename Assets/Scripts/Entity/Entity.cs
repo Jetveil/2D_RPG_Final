@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     public event Action OnFlipped;
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
+    public Entity_Stats stats { get; private set; }
     protected StateMachine stateMachine;
     private bool isFacingRight = true;
     public int facingDir { get; private set; } = 1;
@@ -39,6 +40,7 @@ public class Entity : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         stateMachine = new StateMachine();
+        stats = GetComponent<Entity_Stats>();
     }
 
     protected virtual void Start()
@@ -57,10 +59,18 @@ public class Entity : MonoBehaviour
         stateMachine.currentState.AnimationTrigger();
     }
 
+    /// <summary>
+    /// Хук на смерть сущности: переопределяется наследниками для реакции на 0 HP.
+    /// </summary>
     public virtual void EntityDeath()
     {
     }
 
+    /// <summary>
+    /// Применяет временное замедление параметров сущности на заданную длительность.
+    /// </summary>
+    /// <param name="duration">Длительность эффекта в секундах.</param>
+    /// <param name="slowMultiplier">Доля замедления [0..1].</param>
     public virtual void SlowDownEntity(float duration, float slowMultiplier)
     {
         if (slowDownCo != null)
@@ -69,11 +79,17 @@ public class Entity : MonoBehaviour
         slowDownCo = StartCoroutine(SlowDownEntityCo(duration, slowMultiplier));
     }
 
+    /// <summary>
+    /// Короутина замедления: меняет параметры на время и затем восстанавливает.
+    /// </summary>
     protected virtual IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
     {
         yield return null;
     }
 
+    /// <summary>
+    /// Применяет нокбэк с силой и длительностью, используя Rigidbody2D.
+    /// </summary>
     public void ReceiveKnockback(Vector2 knockback, float duration)
     {
         if (knockbackCoroutine != null)
@@ -81,6 +97,9 @@ public class Entity : MonoBehaviour
         knockbackCoroutine = StartCoroutine(KnockbackCo(knockback, duration));
     }
 
+    /// <summary>
+    /// Короутина нокбэка: задаёт скорость на время и сбрасывает её.
+    /// </summary>
     private IEnumerator KnockbackCo(Vector2 knockback, float duration)
     {
         isKnocked = true;
@@ -90,6 +109,9 @@ public class Entity : MonoBehaviour
         isKnocked = false;
     }
 
+    /// <summary>
+    /// Устанавливает скорость по осям и выполняет авто-поворот по знаку X.
+    /// </summary>
     public void SetVelocity(float xVelocity, float yVelocity)
     {
         if (isKnocked)
@@ -99,6 +121,9 @@ public class Entity : MonoBehaviour
         HandleFlip(xVelocity);
     }
 
+    /// <summary>
+    /// Проверяет, требуется ли поворот по направлению скорости по X, и флипает при необходимости.
+    /// </summary>
     public void HandleFlip(float xVelocity)
     {
         if (xVelocity > 0 && !isFacingRight)
@@ -107,6 +132,9 @@ public class Entity : MonoBehaviour
             Flip();
     }
 
+    /// <summary>
+    /// Поворот спрайта на 180 по Y, инверсия facingDir и событие OnFlipped.
+    /// </summary>
     public void Flip()
     {
         rb.transform.Rotate(0, 180, 0);
@@ -116,6 +144,9 @@ public class Entity : MonoBehaviour
         OnFlipped?.Invoke();
     }
 
+    /// <summary>
+    /// Обновляет флаги касания земли и стены лучами относительно точек чеков.
+    /// </summary>
     private void HandleCollisionDetection()
     {
         groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);

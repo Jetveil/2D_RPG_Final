@@ -9,6 +9,9 @@ public class Player_DashState : PlayerState
     private float originalGravityScale;
     private int dashDir;
 
+    /// <summary>
+    /// Подготавливает рывок: направление, отключение гравитации и таймер.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -21,6 +24,9 @@ public class Player_DashState : PlayerState
         rb.gravityScale = 0;
     }
 
+    /// <summary>
+    /// Движение рывком и выход по таймеру в idle/fall; отмена при касании стены.
+    /// </summary>
     public override void Update()
     {
         base.Update();
@@ -36,6 +42,9 @@ public class Player_DashState : PlayerState
         }
     }
 
+    /// <summary>
+    /// Завершение рывка: обнуляет скорость и возвращает гравитацию.
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
@@ -44,6 +53,9 @@ public class Player_DashState : PlayerState
         rb.gravityScale = originalGravityScale;
     }
 
+    /// <summary>
+    /// Прерывает рывок при контакте со стеной.
+    /// </summary>
     private void CancelDashIfNeeded()
     {
         if (player.wallDetected)

@@ -6,6 +6,9 @@ public class Enemy_GroundedState : EnemyState
     {
     }
 
+    /// <summary>
+    /// На земле: при обнаружении игрока переходит в бой.
+    /// </summary>
     public override void Update()
     {
         base.Update();

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Chest : MonoBehaviour, IDamageable
+public class Object_Chest : MonoBehaviour, IDamageable
 {
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
     private Animator anim => GetComponentInChildren<Animator>();
@@ -12,6 +12,9 @@ public class Chest : MonoBehaviour, IDamageable
     [SerializeField]
     private Vector2 knockbackForce;
 
+    /// <summary>
+    /// Реакция сундука на урон: открывается, получает импульс и проигрывает VFX.
+    /// </summary>
     public bool TakeDamage(float damage, float elementalDamage, ElementType element, Transform damageDealer)
     {
         anim.SetBool("chestOpen", true);

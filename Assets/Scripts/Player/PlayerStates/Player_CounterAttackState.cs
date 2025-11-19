@@ -10,6 +10,9 @@ public class Player_CounterAttackState : PlayerState
         combat = player.GetComponent<Player_Combat>();
     }
 
+    /// <summary>
+    /// Запускает окно контрудара, фиксирует успех и настраивает анимацию.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -20,6 +23,9 @@ public class Player_CounterAttackState : PlayerState
         anim.SetBool("counterAttackPerformed", counteredSomebody);
     }
 
+    /// <summary>
+    /// Держит игрока на месте; выход по триггеру анимации или по таймауту.
+    /// </summary>
     public override void Update()
     {
         base.Update();

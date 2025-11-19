@@ -6,11 +6,17 @@ public class Player_FallState : Player_AiredState
     {
     }
 
+    /// <summary>
+    /// Подготовка к падению (настройки по необходимости).
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
     }
 
+    /// <summary>
+    /// Переходит в idle при приземлении или в wall-slide при касании стены.
+    /// </summary>
     public override void Update()
     {
         base.Update();

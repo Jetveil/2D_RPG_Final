@@ -36,6 +36,9 @@ public class Enemy : Entity
     [SerializeField] private float playerCheckDistance = 10;
     public Transform player { get; private set; }
 
+    /// <summary>
+    /// Короутина замедления врага: снижает скорости и скорость анимации на время.
+    /// </summary>
     protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
     {
         float originalMoveSpeed = moveSpeed;
@@ -55,8 +58,14 @@ public class Enemy : Entity
         anim.speed = originalAnimSpeed;
     }
 
+    /// <summary>
+    /// Разрешает/запрещает оглушение врага при контрударе.
+    /// </summary>
     public void EnableCounterWindow(bool enable) => canBeStunned = enable;
 
+    /// <summary>
+    /// Переводит врага в состояние смерти.
+    /// </summary>
     public override void EntityDeath()
     {
         base.EntityDeath();
@@ -64,11 +73,17 @@ public class Enemy : Entity
         stateMachine.ChangeState(deadState);
     }
 
+    /// <summary>
+    /// Реакция на смерть игрока: возврат ИИ в состояние ожидания.
+    /// </summary>
     private void HandlePlayerDeath()
     {
         stateMachine.ChangeState(idleState);
     }
 
+    /// <summary>
+    /// Входит в режим боя с указанным игроком, если ещё не в бою/атаке.
+    /// </summary>
     public void TryEnterBattleState(Transform player)
     {
         if (stateMachine.currentState == battleState || stateMachine.currentState == attackState)
@@ -78,6 +93,9 @@ public class Enemy : Entity
         stateMachine.ChangeState(battleState);
     }
 
+    /// <summary>
+    /// Возвращает и кеширует ссылку на игрока (если обнаружен).
+    /// </summary>
     public Transform GetPlayerReference()
     {
         if (player == null)
@@ -86,6 +104,9 @@ public class Enemy : Entity
         return player;
     }
 
+    /// <summary>
+    /// Лучевое обнаружение игрока по направлению взгляда с фильтрацией слоя.
+    /// </summary>
     public RaycastHit2D PlayerDetected()
     {
         RaycastHit2D hit = Physics2D.Raycast(playerCheck.position, Vector2.right * facingDir, playerCheckDistance, whatIsPlayer | whatIsGround);

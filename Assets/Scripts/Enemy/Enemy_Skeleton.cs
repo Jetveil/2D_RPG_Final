@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Enemy_Skeleton : Enemy, ICounterable
 {
+    /// <summary>
+    /// Показывает, может ли враг быть оглушён контрударом в текущий момент.
+    /// </summary>
     public bool CanBeCountered
     {
         get => canBeStunned;
@@ -28,6 +31,9 @@ public class Enemy_Skeleton : Enemy, ICounterable
 
 
     [ContextMenu("Stun Enemy")]
+    /// <summary>
+    /// Обрабатывает успешный контрудар: переводит врага в оглушение.
+    /// </summary>
     public void HandleCounter()
     {
         if (CanBeCountered == false)

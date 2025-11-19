@@ -13,17 +13,26 @@ using UnityEngine;
     private float imageFullWidth;
     private float imageHalfWidth;
 
+    /// <summary>
+    /// Вычисляет полную/половинную ширину изображения слоя.
+    /// </summary>
     public void CalculateImageWidth()
     {
         imageFullWidth = background.GetComponent<SpriteRenderer>().bounds.size.x;
         imageHalfWidth = imageFullWidth / 2;
     }
 
+    /// <summary>
+    /// Смещает слой по X пропорционально движению камеры и множителю.
+    /// </summary>
     public void Move(float distanceToMoveCamera)
     {
         background.position += Vector3.right * (distanceToMoveCamera * parallaxMultiplier);
     }
 
+    /// <summary>
+    /// Организует петлю слоя, если он полностью вышел за границы камеры.
+    /// </summary>
     public void LoopBackground(float cameraLeftEdge, float cameraRightEdge)
     {
         float imageRightEdge = (background.position.x + imageHalfWidth) - imageWidthOffset;

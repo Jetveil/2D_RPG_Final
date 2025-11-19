@@ -28,6 +28,9 @@ public class VFX_Autocontroller : MonoBehaviour
             Destroy(gameObject, autodestroyDelay);
     }
 
+    /// <summary>
+    /// Случайно сдвигает позицию в пределах заданных оффсетов.
+    /// </summary>
     private void ApplyRandomOffset()
     {
         if (randomOffset == false)
@@ -39,6 +42,9 @@ public class VFX_Autocontroller : MonoBehaviour
         transform.position = transform.position + new Vector3(xOffset, yOffset);
     }
 
+    /// <summary>
+    /// Случайно поворачивает объект по Z в заданном диапазоне.
+    /// </summary>
     private void ApplyRandomRotation()
     {
         if (randomRotation == false)

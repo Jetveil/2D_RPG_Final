@@ -16,8 +16,12 @@ public abstract class PlayerState : EntityState
         anim = player.anim;
         rb = player.rb;
         input = player.input;
+        stats = player.stats;
     }
 
+    /// <summary>
+    /// Базовое обновление игрока-состояния c обработкой нажатия Dash.
+    /// </summary>
     public override void Update()
     {
         base.Update();
@@ -27,12 +31,18 @@ public abstract class PlayerState : EntityState
             stateMachine.ChangeState(player.dashState);
     }
 
+    /// <summary>
+    /// Устанавливает вертикальную скорость в параметры анимации.
+    /// </summary>
     public override void UpdateAnimationParams()
     {
         base.UpdateAnimationParams();
         anim.SetFloat("yVelocity", rb.linearVelocity.y);
     }
 
+    /// <summary>
+    /// Возвращает true, если не у стены и не в состоянии Dash.
+    /// </summary>
     private bool CanDash()
     {
         if (player.wallDetected || stateMachine.currentState == player.dashState)

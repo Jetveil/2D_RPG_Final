@@ -6,6 +6,9 @@ public class Player_DeadState : PlayerState
     {
     }
 
+    /// <summary>
+    /// Отключает ввод и физику при смерти игрока.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -14,4 +17,3 @@ public class Player_DeadState : PlayerState
         rb.simulated = false;
     }
 }
-

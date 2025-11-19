@@ -6,6 +6,9 @@ public class Player_AiredState : PlayerState
     {
     }
 
+    /// <summary>
+    /// В воздухе: даёт контроль по X и переход в прыжковую атаку по кнопке.
+    /// </summary>
     public override void Update()
     {
         base.Update();

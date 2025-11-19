@@ -21,11 +21,15 @@ public class Player_BasicAttackState : PlayerState
     private int comboIndex = 1;
 
 
+    /// <summary>
+    /// Подготавливает удар: индекс комбо, направление и аним-параметры.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
 
         ResetComboIndexIfNeeded();
+        SyncAttackSpeed();
 
         attackDir = player.moveInput.x != 0 ? (int)player.moveInput.x : player.facingDir;
 
@@ -35,6 +39,9 @@ public class Player_BasicAttackState : PlayerState
     }
 
 
+    /// <summary>
+    /// Ведёт таймер импульса, принимает очередь следующего удара и решает выход.
+    /// </summary>
     public override void Update()
     {
         base.Update();
@@ -49,6 +56,9 @@ public class Player_BasicAttackState : PlayerState
         }
     }
 
+    /// <summary>
+    /// Завершение: либо продолжает комбо, либо возвращается в idle.
+    /// </summary>
     private void HandleStateExit()
     {
         if (comboAttackQueued)
@@ -61,6 +71,9 @@ public class Player_BasicAttackState : PlayerState
             stateMachine.ChangeState(player.idleState);
     }
 
+    /// <summary>
+    /// При выходе увеличивает индекс комбо и фиксирует время удара.
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
@@ -68,12 +81,18 @@ public class Player_BasicAttackState : PlayerState
         lastTimeAttacked = Time.time;
     }
 
+    /// <summary>
+    /// Ставит флажок для продолжения комбо, если лимит не достигнут.
+    /// </summary>
     private void QueueNextAttack()
     {
         if (comboIndex < comboLimit)
             comboAttackQueued = true;
     }
 
+    /// <summary>
+    /// Ведёт таймер импульса и сбрасывает скорость по его окончании.
+    /// </summary>
     private void HandleAttackVelocity()
     {
         attackVelocityTimer -= Time.deltaTime;
@@ -82,6 +101,9 @@ public class Player_BasicAttackState : PlayerState
             player.SetVelocity(0, rb.linearVelocity.y);
     }
 
+    /// <summary>
+    /// Применяет импульс текущего удара с учётом направления.
+    /// </summary>
     private void ApplyAttackVelocity()
     {
         Vector2 attackVelocity = player.attackVelocity[comboIndex - 1];
@@ -90,6 +112,9 @@ public class Player_BasicAttackState : PlayerState
         player.SetVelocity(attackVelocity.x * attackDir, attackVelocity.y);
     }
 
+    /// <summary>
+    /// Сбрасывает индекс комбо, если окно между ударами было пропущено.
+    /// </summary>
     private void ResetComboIndexIfNeeded()
     {
         if (Time.time > lastTimeAttacked + player.comboResetTime)

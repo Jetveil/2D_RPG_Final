@@ -6,6 +6,9 @@ public class Enemy_DeadState : EnemyState
     {
     }
 
+    /// <summary>
+    /// Вход в смерть: отключает анимацию, включает падение и блокирует FSM.
+    /// </summary>
     public override void Enter()
     {
         anim.enabled = false;

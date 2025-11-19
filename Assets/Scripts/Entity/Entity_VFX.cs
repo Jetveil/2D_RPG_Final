@@ -21,6 +21,7 @@ public class Entity_VFX : MonoBehaviour
     [Header("Element Colors")]
     [SerializeField] private Color chillVfx = Color.cyan;
     [SerializeField] private Color burnVfx = Color.red;
+    [SerializeField] private Color electrifyVfx = Color.yellow;
     private Color originalHitVfxColor;
 
     private void Awake()
@@ -31,6 +32,9 @@ public class Entity_VFX : MonoBehaviour
         originalHitVfxColor = hitVfxColor;
     }
 
+    /// <summary>
+    /// Запускает визуальный эффект статуса (мигание цветом) на указанное время.
+    /// </summary>
     public void PlayOnStatusVFX(float duration, ElementType element)
     {
         if (element == ElementType.Ice)
@@ -38,8 +42,21 @@ public class Entity_VFX : MonoBehaviour
 
         if (element == ElementType.Fire)
             StartCoroutine(PlayStatusVfxCo(duration, burnVfx));
+
+        if (element == ElementType.Lightning)
+            StartCoroutine(PlayStatusVfxCo(duration, electrifyVfx));
     }
 
+    public void StopAllVfx()
+    {
+        StopAllCoroutines();
+        sr.color = Color.white;
+        sr.material = originalMaterial;
+    }
+
+    /// <summary>
+    /// Короутина мигания цветом статуса с интервалом.
+    /// </summary>
     private IEnumerator PlayStatusVfxCo(float duration, Color effectColor)
     {
         float tickInterval = .25f;
@@ -63,6 +80,9 @@ public class Entity_VFX : MonoBehaviour
         sr.color = Color.white;
     }
 
+    /// <summary>
+    /// Обновляет цвет «hit»-VFX в зависимости от активного элемента.
+    /// </summary>
     public void UpdateOnHitColor(ElementType element)
     {
         if (element == ElementType.Ice)
@@ -72,6 +92,9 @@ public class Entity_VFX : MonoBehaviour
             hitVfxColor = originalHitVfxColor;
     }
 
+    /// <summary>
+    /// Создаёт VFX попадания/крита у цели и настраивает цвет/флип.
+    /// </summary>
     public void CreateOnHitVFX(Transform target, bool isCrit)
     {
         GameObject hitPrefab = isCrit ? critHitVfx : hitVfx;
@@ -83,6 +106,9 @@ public class Entity_VFX : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Включает материал «получения урона» на короткое время.
+    /// </summary>
     public void PlayOnDamageVFX()
     {
         if (onDamageVFXCo != null)
@@ -91,6 +117,9 @@ public class Entity_VFX : MonoBehaviour
         onDamageVFXCo = StartCoroutine(OnDamageVFXCoroutine());
     }
 
+    /// <summary>
+    /// Короутина временной замены материала для эффекта урона.
+    /// </summary>
     private IEnumerator OnDamageVFXCoroutine()
     {
         sr.material = onDamageMaterial;

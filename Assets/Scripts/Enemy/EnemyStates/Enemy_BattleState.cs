@@ -9,6 +9,9 @@ public class Enemy_BattleState : EnemyState
     {
     }
 
+    /// <summary>
+    /// Вход в бой: обновляет таймер, находит игрока и при необходимости отступает.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -25,6 +28,9 @@ public class Enemy_BattleState : EnemyState
         }
     }
 
+    /// <summary>
+    /// Логика боя: обновляет таймер, атакует в радиусе, иначе преследует.
+    /// </summary>
     public override void Update()
     {
         base.Update();
@@ -42,13 +48,25 @@ public class Enemy_BattleState : EnemyState
     }
 
 
+    /// <summary>
+    /// Обновляет время последнего контакта/обнаружения игрока.
+    /// </summary>
     private void UpdateBattleTimer() => lastTimeWasInBattle = Time.time;
 
+    /// <summary>
+    /// Проверяет, истёк ли таймер выхода из боя.
+    /// </summary>
     private bool BattleTimeIsOver() => Time.time > lastTimeWasInBattle + enemy.battleTimeDuration;
 
+    /// <summary>
+    /// Возвращает true, если игрок в радиусе атаки по X.
+    /// </summary>
     private bool WithinAttackRange() => DistanceToPlayer() < enemy.attackDistance;
 
 
+    /// <summary>
+    /// Горизонтальная дистанция до игрока (по оси X).
+    /// </summary>
     private float DistanceToPlayer()
     {
         if (player == null)
@@ -70,8 +88,14 @@ public class Enemy_BattleState : EnemyState
 //     return verticalDistance <= maxVerticalDistance;
 // }
 
+    /// <summary>
+    /// Требуется ли отступить, если игрок слишком близко.
+    /// </summary>
     private bool ShouldRetreat() => DistanceToPlayer() < enemy.minRetreatDistance;
 
+    /// <summary>
+    /// Возвращает направление к игроку: -1 влево, 1 вправо, 0 если в «мёртвой зоне».
+    /// </summary>
     private int DirectionToPlayer()
     {
         if (player == null) return 0;

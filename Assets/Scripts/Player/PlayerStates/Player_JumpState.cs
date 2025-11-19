@@ -6,6 +6,9 @@ public class Player_JumpState : Player_AiredState
     {
     }
 
+    /// <summary>
+    /// Задаёт вертикальную скорость прыжка при входе.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -13,6 +16,9 @@ public class Player_JumpState : Player_AiredState
         player.SetVelocity(rb.linearVelocity.x, player.jumpForce);
     }
 
+    /// <summary>
+    /// На спаде вертикальной скорости переключается в падение (если не jump-attack).
+    /// </summary>
     public override void Update()
     {
         base.Update();

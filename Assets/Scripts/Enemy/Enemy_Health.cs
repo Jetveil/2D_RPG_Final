@@ -4,6 +4,9 @@ public class Enemy_Health : Entity_Health
 {
     private Enemy enemy => GetComponent<Enemy>();
 
+    /// <summary>
+    /// После получения урона от игрока переводит врага в состояние боя.
+    /// </summary>
     public override bool TakeDamage(float damage, float elementalDamage, ElementType element, Transform damageDealer)
     {
         bool wasHit = base.TakeDamage(damage, elementalDamage, element, damageDealer);

@@ -10,6 +10,9 @@ public class Enemy_StunnedState : EnemyState
     }
 
 
+    /// <summary>
+    /// При оглушении выключает окно атаки, задаёт откат и отталкивание.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -20,6 +23,9 @@ public class Enemy_StunnedState : EnemyState
         rb.linearVelocity = new Vector2(enemy.stunnedVelocity.x * -enemy.facingDir, rb.linearVelocity.y);
     }
 
+    /// <summary>
+    /// По истечении таймера возвращается к ожиданию.
+    /// </summary>
     public override void Update()
     {
         base.Update();

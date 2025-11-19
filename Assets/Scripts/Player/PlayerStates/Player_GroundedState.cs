@@ -6,6 +6,9 @@ public class Player_GroundedState : PlayerState
     {
     }
 
+    /// <summary>
+    /// На земле: обрабатывает прыжок/атаку/контрудар и переходы в падение.
+    /// </summary>
     public override void Update()
     {
         base.Update();

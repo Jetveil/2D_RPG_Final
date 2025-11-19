@@ -71,6 +71,9 @@ public class Player : Entity
         stateMachine.Initialize(idleState);
     }
 
+    /// <summary>
+    /// Короутина замедления игрока: понижает скорости/силы и затем восстанавливает их.
+    /// </summary>
     protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
     {
         float originalMoveSpeed = moveSpeed;
@@ -108,6 +111,9 @@ public class Player : Entity
         }
     }
 
+    /// <summary>
+    /// Реакция на смерть игрока: событие, переход в состояние смерти.
+    /// </summary>
     public override void EntityDeath()
     {
         base.EntityDeath();
@@ -116,6 +122,9 @@ public class Player : Entity
         stateMachine.ChangeState(deadState);
     }
 
+    /// <summary>
+    /// Входит в базовую атаку со сдвигом на конец кадра (для корректной анимации).
+    /// </summary>
     public void EnterAttackStateWithDelay()
     {
         if (queuedAttackCo != null)
@@ -124,6 +133,9 @@ public class Player : Entity
         queuedAttackCo = StartCoroutine(EnterAttackStateWIthDelayCo());
     }
 
+    /// <summary>
+    /// Короутина задержки входа в состояние базовой атаки на 1 кадр.
+    /// </summary>
     private IEnumerator EnterAttackStateWIthDelayCo()
     {
         yield return new WaitForEndOfFrame();

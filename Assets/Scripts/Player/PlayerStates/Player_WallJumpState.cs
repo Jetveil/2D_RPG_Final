@@ -6,6 +6,9 @@ public class Player_WallJumpState : PlayerState
     {
     }
 
+    /// <summary>
+    /// При входе задаёт импульс от стены и вверх.
+    /// </summary>
     public override void Enter()
     {
         base.Enter();
@@ -13,6 +16,9 @@ public class Player_WallJumpState : PlayerState
         player.SetVelocity(player.wallJumpForce.x * -player.facingDir, player.wallJumpForce.y);
     }
 
+    /// <summary>
+    /// Переходы: jump-attack по кнопке, падение при отрицательной Y, обратно в slide при касании.
+    /// </summary>
     public override void Update()
     {
         base.Update();

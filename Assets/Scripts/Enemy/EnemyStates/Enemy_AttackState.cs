@@ -6,6 +6,15 @@ public class Enemy_AttackState : EnemyState
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        SyncAttackSpeed();
+    }
+
+    /// <summary>
+    /// Во время атаки ждёт анимационный триггер и возвращается в бой.
+    /// </summary>
     public override void Update()
     {
         base.Update();

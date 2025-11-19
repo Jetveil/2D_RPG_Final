@@ -6,6 +6,9 @@ public class Player_WallSlideState : PlayerState
     {
     }
 
+    /// <summary>
+    /// Обрабатывает скольжение по стене и переходы в прыжок/падение/idle.
+    /// </summary>
     public override void Update()
     {
         base.Update();
@@ -25,6 +28,9 @@ public class Player_WallSlideState : PlayerState
         }
     }
 
+    /// <summary>
+    /// Управляет вертикальной скоростью во время скольжения по стене.
+    /// </summary>
     public void HandleWallSlide()
     {
         if (player.moveInput.y < 0)

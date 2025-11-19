@@ -34,6 +34,9 @@ public class ParallaxBackground : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Вычисляет и кеширует ширину спрайтов слоёв для корректной петли.
+    /// </summary>
     private void CalculateImageLength()
     {
         foreach (ParallaxLayer layer in backgroundLayers)
