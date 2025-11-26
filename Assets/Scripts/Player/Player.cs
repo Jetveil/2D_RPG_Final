@@ -11,6 +11,7 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class Player : Entity
 {
+    private UI ui;
     public static event Action OnPlayerDeath;
     public PlayerInputSet input { get; private set; }
 
@@ -50,6 +51,8 @@ public class Player : Entity
     protected override void Awake()
     {
         base.Awake();
+
+        ui = FindAnyObjectByType<UI>();
 
         input = new PlayerInputSet();
 
@@ -147,6 +150,8 @@ public class Player : Entity
         input.Enable();
         input.Player.Movement.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         input.Player.Movement.canceled += ctx => moveInput = Vector2.zero;
+
+        input.Player.ToggleSkillTreeUI.performed += ctx => ui.ToggleSkillTreeUI();
     }
 
     private void OnDisable()
