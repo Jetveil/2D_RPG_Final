@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8e78b2b7ba0624cbd28d85e23fdfa0, type: 3}
+  m_Name: Skill Data - Mirror Shard
+  m_EditorClassIdentifier: 
+  cost: 3
+  unlockedByDefault: 0
+  skillType: 2
+  upgradeData:
+    upgradeType: 8
+    cooldown: 4
+  displayedName: Mirror Shard
+  description: Time Shard now has 3 charges
+  icon: {fileID: -1641772763, guid: fb5f675d4dc68d347b0861a231f744d3, type: 3}
