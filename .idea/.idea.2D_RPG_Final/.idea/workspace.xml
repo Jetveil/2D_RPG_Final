@@ -20,22 +20,55 @@
   <component name="ChangeListManager">
     <list default="true" id="7f2206a1-f213-436b-9618-3675f319d469" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_RPG_Final/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimatorControllers/Object_Buff.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimatorControllers/Object_Buff.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI/artdecoUI_PIPO_tr.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI/artdecoUI_PIPO_tr.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/CritHit_01/FX024_6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/VFX/Hit_01/SP103_04.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/PlayerInputSet.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Default Stat Setup - Player.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Default Stat Setup - Player.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Default Stat Setup - Skeleton.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Default Stat Setup - Skeleton.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Cleanse.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Cleanse.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Healing Wisp.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Healing Wisp.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Quick thinking.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Quick thinking.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Time Echo.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Time Echo.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Timeless Attack.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Skill Data - Timeless Attack.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_VFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Entity_VFX.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LatestCode.zip" beforeDir="false" afterPath="$PROJECT_DIR$/LatestCode.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStates/Player_DashState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStates/Player_DashState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Skill_DataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Skill_DataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI_SkillToolTip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UI_SkillToolTip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI_SkillTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UI_SkillTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI_TreeConnectHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UI_TreeConnectHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UI_TreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UI_TreeNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX/VFX_Autocontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX/VFX_Autocontroller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnityMentor_Chat.md" beforeDir="false" afterPath="$PROJECT_DIR$/UnityMentor_Chat.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync_fixed.py" beforeDir="false" afterPath="$PROJECT_DIR$/sync_fixed.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,8 +133,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Combat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Entity_Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Entity_VFX.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/SkillUpgradeType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStates/Player_DeadState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player_Combat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player_SkillManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player_VFX.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillObject_Base.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillObject_Shard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Skill_Base.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Skill_Dash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Skill_DataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Skill_Shard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatSystem/Stat_DefenseGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatSystem/Stat_OffenseGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatSystem/Stat_ResourceGroup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,9 +154,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_SkillTree.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_TreeConnectHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_TreeConnection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UI_TreeNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@a1db3619cb6f/Editor/SpriteLib/SpriteLibrarySourceAsset/SpriteLibrarySourceAssetImporter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.aseprite@fa26c8d7c7e6/Editor/AssetGeneration/PrefabGeneration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.aseprite@fa26c8d7c7e6/Editor/AssetGeneration/TextureGeneration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@089d78c497f7/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@089d78c497f7/Editor/TileSet/TileSetImporter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@ad30dfd93d36/Runtime/UGUI/EventSystem/EventInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@ad30dfd93d36/Tests/Runtime/UGUI/Util/ExceptionUtils.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -155,7 +204,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.17782657&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -392,6 +441,16 @@
       <workItem from="1763814827713" duration="3846000" />
       <workItem from="1763834536093" duration="45129000" />
       <workItem from="1764098404387" duration="5513000" />
+      <workItem from="1764156046338" duration="18451000" />
+      <workItem from="1764356082956" duration="20318000" />
+      <workItem from="1764584698850" duration="6829000" />
+      <workItem from="1764680572344" duration="7070000" />
+      <workItem from="1764841847457" duration="46000" />
+      <workItem from="1764841952203" duration="4168000" />
+      <workItem from="1765030803186" duration="154000" />
+      <workItem from="1765030994822" duration="5657000" />
+      <workItem from="1765196904198" duration="21034000" />
+      <workItem from="1765464404524" duration="6693000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -545,7 +604,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763566239571</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Chapter 09 done">
+      <option name="closed" value="true" />
+      <created>1764156138124</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1764156138124</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +672,8 @@
     <MESSAGE value="before comment docs" />
     <MESSAGE value="before doc comment 2" />
     <MESSAGE value="Chapter 9 started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 9 started" />
+    <MESSAGE value="Chapter 09 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 09 done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

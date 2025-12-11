@@ -78,8 +78,12 @@ public class UI_SkillToolTip : UI_Tooltip
         sb.AppendLine("Requirements:");
         string costColor = skillTree.EnoughSkillPoints(skillCost) ? metConditionHex : notMetConditionHex;
         sb.AppendLine($"<color={costColor}> - {skillCost} skill point(s) </color>");
+
         foreach (var node in neededNodes)
         {
+            if (node == null)
+                continue;
+
             string nodeColor = node.isUnlocked ? metConditionHex : notMetConditionHex;
             sb.AppendLine($"<color={nodeColor}> - {node.skillData.displayedName} </color>");
         }
@@ -92,6 +96,8 @@ public class UI_SkillToolTip : UI_Tooltip
 
         foreach (var node in conflictNodes)
         {
+            if (node == null)
+                continue;
             sb.AppendLine($"<color={importantInfoHex}> - {node.skillData.displayedName} </color>");
         }
 

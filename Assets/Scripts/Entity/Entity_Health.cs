@@ -32,7 +32,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
     [Header("On Heavy Damage Knockback")]
     [SerializeField]
     private float heavyDamageThreshold = 0.3f; // Percentage of HP to lose to consider attack as heavy
-    
+
 
     /// <summary>
     /// Инициализирует ссылки на компоненты, устанавливает текущее здоровье,
@@ -47,8 +47,8 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
         currentHealth = entityStats.GetMaxHealth();
         UpdateHealthBar();
-        
-        InvokeRepeating(nameof(RegenerateHealth), 0 , healthRegenInterval);
+
+        InvokeRepeating(nameof(RegenerateHealth), 0, healthRegenInterval);
     }
 
     /// <summary>
@@ -144,6 +144,14 @@ public class Entity_Health : MonoBehaviour, IDamageable
     {
         isDead = true;
         entity.EntityDeath();
+    }
+
+    public float GetHealthPercent() => currentHealth / entityStats.GetMaxHealth();
+
+    public void SetHealthToPercent(float percent)
+    {
+        currentHealth = entityStats.GetMaxHealth() * Mathf.Clamp01(percent);
+        UpdateHealthBar();
     }
 
     /// <summary>
